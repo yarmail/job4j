@@ -1,3 +1,4 @@
+# В файле .gitignore содержится список файлов, которые не контролируются через git.
 # Compiled class file
 *.class
 
@@ -21,3 +22,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Папка target используется maven в качестве папки для хранения скомпилированных кодов.
+target
