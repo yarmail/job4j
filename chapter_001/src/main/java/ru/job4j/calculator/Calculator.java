@@ -1,5 +1,10 @@
 package ru.job4j.calculator;
 
+/*
+элементарный калькулятор + - * /
+elementary calculator + - * /
+*/
+
 public class Calculator {
     private double result;
 
