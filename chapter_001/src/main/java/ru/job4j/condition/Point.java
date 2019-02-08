@@ -11,7 +11,7 @@ public class Point {
     private int y;
 
 
-    public Point(int x, int y){ //конструктор класса
+    public Point(int x, int y) { //конструктор класса
     this.x = x;  //теперь к точке A можно обращаться через This
     this.y = y;
     }
@@ -27,9 +27,9 @@ public class Point {
         return result;
     }
 
-    public static void main (String[] args) {
-        Point a = new Point(0,1);
-        Point b = new Point(2,5);
+    public static void main(String[] args) {
+        Point a = new Point(0, 1);
+        Point b = new Point(2, 5);
         System.out.println("x1 = " + a.x);
         System.out.println("y1 = " + a.y);
         System.out.println("x2 = " + b.x);
