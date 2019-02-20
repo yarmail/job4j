@@ -24,8 +24,8 @@ public class Max {
 
    // в теории результат сравнения первых двух чисел сравниваем с третьим числом
    // используем перегрузку методов (с одинаковым названием)
-   public int max (int first, int second, int third) {
+   public int max(int first, int second, int third) {
       // используем вызов метода в методе вместо одной из переменных (матрешка)
-      return max (max(first, second), third);
+      return max(max(first, second), third);
    }
 }
