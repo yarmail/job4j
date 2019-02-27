@@ -18,7 +18,7 @@ public class Board {
         String ln = System.lineSeparator(); // метод возвращает системно-зависимый разделитель строк
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                if ((i+j) % 2 == 0) {  // для X сумма индексов четное число
+                if ((i + j) % 2 == 0) {  // для X сумма индексов четное число
                     screen.append("X");
                 } else {
                     screen.append(" ");
