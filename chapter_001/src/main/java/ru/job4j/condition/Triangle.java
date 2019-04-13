@@ -1,11 +1,11 @@
 package ru.job4j.condition;
 
-/*
-Вычисление площади треугольника через полупериметр
-Calculating the area of a triangle through a semi-perimeter
-
-Используем подготовленный ранее класс Point для вычисления расстояний
-между точками
+/**
+ * Вычисление площади треугольника через полупериметр
+ * Calculating the area of a triangle through a semi-perimeter
+ *
+ * Используем подготовленный ранее класс Point для вычисления расстояний
+ * между точками
  */
 
 public class Triangle {

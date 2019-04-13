@@ -1,7 +1,9 @@
 package ru.job4j.calculate;
 
 /**
-* Calculate
+* Console output Hello World.
+* Вывод в консоль Hello World
+*
 * @autor Yarmail (yarmail@yandex.ru)
 * @version $Id$
 * @since 0.1
@@ -24,5 +26,4 @@ public class Calculate {
 	public String echo(String name) {
         return "Echo, echo, echo : " + name;
    	}
-
 }
