@@ -1,5 +1,5 @@
-### Completed work on the practical course job4j.ru  
-*(Выполненные работы по практическому курсу job4j.ru)*
+### Completed work on the practical course JAVA job4j.ru  
+*(Выполненные работы по практическому курсу JAVA job4j.ru)*
 
 #### package Array
 * ArrayChar.startWith. Self-realization String.startsWith
@@ -63,3 +63,4 @@ using the permutation or "bubble sort method"
 #### package Puzzle
 * Puzzle.Logic.isWin. It is necessary to check that in the array the units form a row vertically and horizontally of the necessary size.
  *(Нужно проверить что в массиве единицы образуют ряд по вертикали и горизонтали нужно размера.)*
+ 

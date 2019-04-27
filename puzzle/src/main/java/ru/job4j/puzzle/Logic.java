@@ -90,9 +90,7 @@ public class Logic {
                     }
                 }
             break;
-            }
-            // если есть единица в первой вертикали
-            else if (table[i][0] == 1) {
+            } else if (table[i][0] == 1) {
                 horizontally = true;
                 // проверяем горизонталь
                 for (int j = 0; j < table.length; j++) {
