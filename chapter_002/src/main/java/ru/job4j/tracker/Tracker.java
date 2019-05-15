@@ -1,8 +1,10 @@
 package ru.job4j.tracker;
 
+import java.util.Arrays;
+
 /**
  * items = массив для хранения заявок
- * position = указатель ячейки для новой заявки
+ * position = после выполнение add() - показывает количество заявок
  */
 
 public class Tracker {
@@ -47,12 +49,13 @@ public class Tracker {
      *
      * @param id
      * @return возвращает найденный Item
+     * исправлено 15.05.2019
      */
     public Item findById(String id) {
         Item result = null;
-        for (Item el : this.items) {
-            if ((el != null) && (el.getId()).equals(id)) {
-                result = el;
+        for (int i = 0; i < this.position; i++) {
+            if ((this.items[i] != null) && (this.items[i].getId()).equals(id)) {
+                result = items[i];
                 break;
             }
         }
@@ -62,25 +65,16 @@ public class Tracker {
     /**
      * Getting a list of all applications
      * Получение списка всех заявок
-     * <p>
+     *
      * Предполагаю, что список заявок не содержит внутри себя нулевых элементов
-     * Count показывает, сколько ненулевых элементов
      *
      * @return возвращает копию массива this.items без null элементов
-     * c помощью System.arraycopy
+     * c помощью System.arraycopy (указано в задании)
+     * Andrei Hincu указал делать через Arrays.copyOf()
+     * исправлено 15.05.2019
      */
     public Item[] findAll() {
-        int count = 0;
-        for (int i = 0; i < this.items.length; i++) {
-            if (this.items[i] != null) {
-                count = count + 1;
-            }
-            if (this.items[i] == null) {
-                break;
-            }
-        }
-        Item[] result = new Item[count];
-        System.arraycopy(this.items, 0, result, 0, count);
+        Item[] result = Arrays.copyOf(this.items, this.position);
         return result;
     }
 
@@ -97,16 +91,17 @@ public class Tracker {
      * @param key
      * @return result массив у которых совпадает name.
      * (!!! Пока не понятно, оптимальный ли это способ)
+     * Пока не очень понятно где и как здесь использовать Arrays.copyOf
      */
     public Item[] findByName(String key) {
         int count = 0;
-        for (int i = 0; i < this.items.length; i++) {
+        for (int i = 0; i < this.position; i++) {
             if ((this.items[i] != null) && (this.items[i].getName().equals(key))) {
                 count = count + 1;
             }
         }
         Item[] result = new Item[count];
-        for (int i = 0; i < this.items.length; i++) {
+        for (int i = 0; i < this.position; i++) {
             if ((this.items[i] != null) && (this.items[i].getName().equals(key))) {
                 for (int j = 0; j < count; j++) {
                     result[j] = this.items[i];
@@ -119,40 +114,29 @@ public class Tracker {
     /**
      * Delete applications
      * Удаление заявок (находим заявку по id)
-     * <p>
+     *
      * result = результат операции удаления
-     * (!!!Пока предполагаем, что id существует и нормальное)
-     * count = findAll().length; получаем общее количество ненулевых заявок
-     * if (count != 0) // если в полученном списке есть заявки
      * Находим позицию нужной заявки через id
-     * <p>
-     * if (i! = count - 1)// если найденная заявка не последняя по индексу
-     * Копируем массив влево с позиции i+1 на позицию i, ((count-1) - i) всего элементов
-     * Присваиваем последней заявке null, т.к. она скопирована в предпоследнюю
-     * Останавливаемся
-     * <p>
-     * if (i = count - 1)// если найденная заявка последняя по индексу
-     * Присваиваем заявке null (просто "удаляем")
-     * <p>
-     * В обоих этих случаях result = true, в остальных - остается false
+     * Не забываем изменить позицию при удалении
+     * Исправлено 15.05.2019
      */
 
     public boolean delete(String id) {
         boolean result = false;
-        int count = findAll().length;
-        if (count != 0) {
-            for (int i = 0; i < count; i++) {
-                if (this.items[i].getId().equals(id)) {
-                    if (i != count - 1) {
-                        System.arraycopy(this.items, (i + 1), this.items, i, (count - 1) - i);
-                        this.items[count - 1] = null;
-                        result = true;
-                        break;
-                    }
-                    if (i == count - 1) {
-                        this.items[count - 1] = null;
-                        result = true;
-                    }
+        if ((this.position == 0)
+                && (this.items[this.position] != null)
+                && this.items[this.position].getId().equals(id)) {
+            this.items[this.position] = null;
+            result = true;
+        }
+        if (this.position > 0) {
+            for (int i = 0; i <= this.position; i++) {
+                if ((this.items[i] != null) && this.items[i].getId().equals(id)) {
+                    System.arraycopy(this.items, (i + 1), this.items, i, (this.position) - i);
+                    this.items[this.position] = null;
+                    this.position--;
+                    result = true;
+                    break;
                 }
             }
         }
@@ -166,28 +150,20 @@ public class Tracker {
      * @param id (находим заявку по id)
      * @param item новая заявка, которая заменит найденную в хранилище
      * @return result насколько успешная операция
-     * (!!!пока предполагаем, что входящие id и item существуют и нормальные)
-     * <p>
-     *  count = findAll().length; // число ненулевых заявок
-     *  Если count не равно 0:
-     *  Если объект найден по id - он заменяется в ячейке входящим
-     *  Результат положительный. Прерывание
-     *  Во всех остальных случаях результат остается отрицательным
+     * "и добавьте строку item.setId(id); чтобы перезаписать id если он выставлен ошибочно"
+     * исправлено 15.05.2019
      */
 
     public boolean replace(String id, Item item) {
         boolean result = false;
-        int count = findAll().length;
-        if (count != 0) {
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < this.position; i++) {
                 if (this.items[i].getId().equals(id)) {
                     items[i] = item;
+                    item.setId(id);
                     result = true;
                     break;
                 }
             }
-
-        }
         return result;
     }
 }
