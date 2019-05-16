@@ -3,6 +3,8 @@ package ru.job4j.tracker;
 import java.util.Arrays;
 
 /**
+ * Class Tracker is a wrapper over an array
+ * Класс Трекер - это обертка над массивом
  * items = массив для хранения заявок
  * position = после выполнение add() - показывает количество заявок
  */
@@ -81,33 +83,29 @@ public class Tracker {
     /**
      * Search in array by name
      * Поиск в массиве по полю Name
-     * <p>
+     *
      * Вижу 2 варианта:
      * 1) (первый прогон) сначала посчитать счетчиком все совпадения,
-     * сделать новый маленький массив и заново найти уже с копированием (второй прогон) - пока так и поступлю
-     * 2) создать 2 одинаковых массива и копировать найденные значения -
-     * мне кажется при больших массивах так будет нерационально использовать память.
+     * сделать новый маленький массив
+     * и заново найти уже с копированием (второй прогон) (версия не нашла поддержки куратора)
+     * 2) делаете временный массив длиной с позишен
+     * заполняете по счетчику и обрезаете до счетчика в Arrays.copyOf (делаем так)
+     * (мне кажется при больших массивах так будет нерационально использоваться память.)
      *
      * @param key
      * @return result массив у которых совпадает name.
-     * (!!! Пока не понятно, оптимальный ли это способ)
-     * Пока не очень понятно где и как здесь использовать Arrays.copyOf
+     * Исправлено 16 may 2019
      */
     public Item[] findByName(String key) {
         int count = 0;
+        Item[] tmp = new Item[this.position];
         for (int i = 0; i < this.position; i++) {
             if ((this.items[i] != null) && (this.items[i].getName().equals(key))) {
-                count = count + 1;
+                tmp[count] = this.items[i];
+                count++;
             }
         }
-        Item[] result = new Item[count];
-        for (int i = 0; i < this.position; i++) {
-            if ((this.items[i] != null) && (this.items[i].getName().equals(key))) {
-                for (int j = 0; j < count; j++) {
-                    result[j] = this.items[i];
-                }
-            }
-        }
+        Item[] result = Arrays.copyOf(tmp, count);
         return result;
     }
 
@@ -118,28 +116,20 @@ public class Tracker {
      * result = результат операции удаления
      * Находим позицию нужной заявки через id
      * Не забываем изменить позицию при удалении
-     * Исправлено 15.05.2019
+     * Исправлено 16.05.2019
      */
 
     public boolean delete(String id) {
         boolean result = false;
-        if ((this.position == 0)
-                && (this.items[this.position] != null)
-                && this.items[this.position].getId().equals(id)) {
-            this.items[this.position] = null;
-            result = true;
-        }
-        if (this.position > 0) {
-            for (int i = 0; i <= this.position; i++) {
+            for (int i = 0; i < this.position; i++) {
                 if ((this.items[i] != null) && this.items[i].getId().equals(id)) {
-                    System.arraycopy(this.items, (i + 1), this.items, i, (this.position) - i);
-                    this.items[this.position] = null;
+                    System.arraycopy(this.items, (i + 1), this.items, i, this.position - (i+1));
                     this.position--;
+                    this.items[this.position] = null;
                     result = true;
                     break;
                 }
             }
-        }
         return result;
     }
 
