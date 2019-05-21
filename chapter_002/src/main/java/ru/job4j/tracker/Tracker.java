@@ -33,8 +33,8 @@ public class Tracker {
     }
 
     /**
-     * Add new application
-     * Метод добавляет новую заявку в хранилище
+     * Аdd method adds ids and adds new order to storage
+     * Метод добавляет id и добавляет новую заявку в хранилище
      *
      * @param item новая заявка
      * @return возвращает заявку с параметрами
@@ -50,8 +50,7 @@ public class Tracker {
      * Поиск ячейки в массиве по id
      *
      * @param id
-     * @return возвращает найденный Item
-     * исправлено 15.05.2019
+     * @return Item result возвращает найденный Item, если он есть
      */
     public Item findById(String id) {
         Item result = null;
@@ -69,11 +68,7 @@ public class Tracker {
      * Получение списка всех заявок
      *
      * Предполагаю, что список заявок не содержит внутри себя нулевых элементов
-     *
      * @return возвращает копию массива this.items без null элементов
-     * c помощью System.arraycopy (указано в задании)
-     * Andrei Hincu указал делать через Arrays.copyOf()
-     * исправлено 15.05.2019
      */
     public Item[] findAll() {
         Item[] result = Arrays.copyOf(this.items, this.position);
@@ -113,17 +108,18 @@ public class Tracker {
      * Delete applications
      * Удаление заявок (находим заявку по id)
      *
-     * result = результат операции удаления
+     * @param id - на вход id заказа
      * Находим позицию нужной заявки через id
      * Не забываем изменить позицию при удалении
      * Исправлено 16.05.2019
+     * @return result удалось удалить или нет
      */
 
     public boolean delete(String id) {
         boolean result = false;
             for (int i = 0; i < this.position; i++) {
                 if ((this.items[i] != null) && this.items[i].getId().equals(id)) {
-                    System.arraycopy(this.items, (i + 1), this.items, i, this.position - (i+1));
+                    System.arraycopy(this.items, (i + 1), this.items, i, this.position - (i + 1));
                     this.position--;
                     this.items[this.position] = null;
                     result = true;
