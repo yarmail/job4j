@@ -93,8 +93,13 @@ public class StartUI {
         String desc = this.input.ask("Please enter the new description of the order");
         long created = System.currentTimeMillis();
         Item item = new Item(name, desc, created);
-        this.tracker.replace(id, item);
-        System.out.println("------------ The order with number : " + item.getId() + " has been edited");
+        boolean result = this.tracker.replace(id, item);
+        if (result) {
+            System.out.println("------------ The order with number : " + item.getId() + " has been edited");
+        }
+        if (!result) {
+            System.out.println("------------ Edit operation failed --------------");
+        }
     }
 
     /**
