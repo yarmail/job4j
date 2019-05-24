@@ -17,7 +17,7 @@ public class BoardTest {
     @Test
     public void whenPaintBoardWithWidthFiveAndHeightFourThenStringWithFiveColsAndFourRows() {
         Board board = new Board();
-        String result = board.paint(5, 4);
+        String result = board.paint(4, 5);
         final String line = System.getProperty("line.separator");
         String expected = String.format("X X X%s X X %sX X X%s X X %s", line, line, line, line);
         assertThat(result, is(expected));

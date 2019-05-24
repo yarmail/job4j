@@ -160,7 +160,7 @@ public class StartUI {
         boolean exit = false;
         while (!exit) {
             this.showMenu();
-            String answer = this.input.ask("Please select a menu item");
+            String answer = this.input.ask("Please select a menu item and press Enter: ");
             if (ADD.equals(answer)) {
                 this.createItem();
             }
