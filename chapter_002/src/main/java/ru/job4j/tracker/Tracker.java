@@ -88,8 +88,7 @@ public class Tracker {
      * (мне кажется при больших массивах так будет нерационально использоваться память.)
      *
      * @param key
-     * @return result массив у которых совпадает name.
-     * Исправлено 16 may 2019
+     * @return result ARRAY массив у которых совпадает name.
      */
     public Item[] findByName(String key) {
         int count = 0;
@@ -111,8 +110,7 @@ public class Tracker {
      * @param id - на вход id заказа
      * Находим позицию нужной заявки через id
      * Не забываем изменить позицию при удалении
-     * Исправлено 16.05.2019
-     * @return result удалось удалить или нет
+     * @return result boolean удалось удалить или нет
      */
 
     public boolean delete(String id) {
