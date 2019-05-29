@@ -1,7 +1,7 @@
-Yaroslav Tsinovskiy (Yar Tsin)  
-position: Learning, internship @ look for work Junior Java  
-location: Moscow  
-email: yarmail@yandex.ru 
+Yaroslav Tsinovskiy (Yar Tsin)<br> 
+position: Learning, internship @ look for work Junior Java<br> 
+location: Moscow<br>
+email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
 
 
