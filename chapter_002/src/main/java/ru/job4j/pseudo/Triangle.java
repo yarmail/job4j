@@ -1,13 +1,16 @@
 package ru.job4j.pseudo;
 
+import java.util.StringJoiner;
+
 public class Triangle implements Shape {
 
     public String draw() {
-        StringBuilder pic = new StringBuilder();
-        pic.append("+");
-        pic.append("++");
-        pic.append("+++");
-        pic.append("++++");
-        return pic.toString();
+        String drawTriangle = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                .add("+")
+                .add("++")
+                .add("+++")
+                .add("++++")
+                .toString();
+        return drawTriangle;
     }
 }
