@@ -1,10 +1,11 @@
 package ru.job4j.pseudo;
 
+import org.junit.Before;
+import org.junit.After;
 import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.StringJoiner;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -39,38 +40,54 @@ import static org.junit.Assert.assertThat;
  * //возвращаем обратно стандартный вывод в консоль.
  */
 public class PaintTest {
+    /**
+     * Как мы видим наш код имеет повторяющиеся куски кода.
+     * Эти куски кода устанавливают начальное значения и убирают их в конце.
+     * выносим из тестов в поля
+     */
+    private final PrintStream stdout = System.out;
+    private final ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+    /**
+     * Эти куски кода устанавливают начальное значения и убирают их в конце.
+     * Давайте мы вынесем эти куски в отдельные методы.
+     * System.out.println("execute before method"); -  в тестировании
+     * будет  прописываться использование этой аннотации
+     */
+    @Before
+    public void loadOutput() {
+        System.out.println("execute before method");
+        System.setOut(new PrintStream(this.out));
+
+    }
+
+    @After
+    public void backOutput() {
+        System.setOut(this.stdout);
+        System.out.println("execute after method");
+    }
 
     @Test
     public void drawSquare() {
-    PrintStream stdout = System.out;
-    ByteArrayOutputStream out = new ByteArrayOutputStream();
-    System.setOut(new PrintStream(out));
     new Paint().draw(new Square());
-        assertThat(new String(out.toByteArray()), is (new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+        assertThat(this.out.toString(), is (new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("++++")
                 .add("++++")
                 .add("++++")
                 .add("++++")
                 .toString()
         ));
-        System.setOut(stdout);
     }
 
     @Test
     public void drawTriangle() {
-        PrintStream stdout = System.out;
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(out));
         new Paint().draw(new Triangle());
-        assertThat(new String(out.toByteArray()), is (new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+        assertThat(this.out.toString(), is (new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("+")
                 .add("++")
                 .add("+++")
                 .add("++++")
                 .toString()
         ));
-        System.setOut(stdout);
     }
-
-
 }
