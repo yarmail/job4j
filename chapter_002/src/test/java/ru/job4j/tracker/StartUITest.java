@@ -8,6 +8,21 @@ import static org.junit.Assert.assertThat;
  * Через эмулятор StubInput тестируем StartUI
  */
 public class StartUITest {
+    /**
+     * Для рефакторинга переносим повторяющиеся переменные в поля класса
+     */
+    private final Tracker tracker = new Tracker();
+    private final Item item = tracker.add(new Item("test name", "desc", 12345));
+
+    /**
+     * Показываем все заявки
+     */
+    @Test
+    public void showAllTest() {
+        Input input = new StubInput(new String[] {"1", "6"});
+        new StartUI(input, tracker).init();
+    }
+
 
     /**
      * addItemTest
@@ -27,7 +42,6 @@ public class StartUITest {
      */
     @Test
     public void addItemTest() {
-        Tracker tracker = new Tracker();
         Input input = new StubInput(new String[] {"0", "test name", "desc", "6"});
         new StartUI(input, tracker).init();
         assertThat(tracker.findAll()[0].getName(), is("test name"));
@@ -53,8 +67,6 @@ public class StartUITest {
      */
     @Test
     public void editItemTest() {
-        Tracker tracker = new Tracker();
-        Item item = tracker.add(new Item("test name", "desc", 12345));
         Input input = new StubInput(new String[] {"2", item.getId(), "new name", "new desc", "6"});
         new StartUI(input, tracker).init();
         assertThat(tracker.findById(item.getId()).getName(), is("new name"));
@@ -65,8 +77,6 @@ public class StartUITest {
      */
     @Test
     public void deleteTest() {
-        Tracker tracker = new Tracker();
-        Item item = tracker.add(new Item("test name", "desc", 12345));
         Input input = new StubInput(new String[] {"3", item.getId(), "6"});
         new StartUI(input, tracker).init();
         Item[] result = tracker.findByName("test name");
