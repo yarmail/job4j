@@ -45,7 +45,7 @@ public class StartUI {
         System.out.println("1. Show all order");
         System.out.println("2. Edit order");
         System.out.println("3. Delete order");
-        System.out.println("4. Find order by Id");
+        System.out.println("4. Find order by ID");
         System.out.println("5. Find order by name");
         System.out.println("6. Exit Program");
         System.out.println("Select:");
@@ -76,7 +76,7 @@ public class StartUI {
         }
         if (result.length > 0) {
             for (Item el : result) {
-                System.out.println("Id: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime());
+                System.out.println("ID: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime());
             }
             System.out.println("------------ End of list orders --------------");
         }

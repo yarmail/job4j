@@ -1,8 +1,15 @@
 package ru.job4j.tracker;
 
+import org.hamcrest.core.StringContains;
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import java.util.StringJoiner;
+
 
 /**
  * Через эмулятор StubInput тестируем StartUI
@@ -13,14 +20,45 @@ public class StartUITest {
      */
     private final Tracker tracker = new Tracker();
     private final Item item = tracker.add(new Item("test name", "desc", 12345));
+    /**
+     * Подключаем переменные для перенапрвления вывода
+     */
+    private final PrintStream stdout = System.out;
+    private final ByteArrayOutputStream out = new ByteArrayOutputStream();
+    /**
+     * Подключаем меню для влючения в буфер
+     */
+    private final String menu = new StringJoiner(System.lineSeparator())
+            .add("Menu")
+            .add("0. Add new order")
+            .add("1. Show all order")
+            .add("2. Edit order")
+            .add("3. Delete order")
+            .add("4. Find order by ID")
+            .add("5. Find order by name")
+            .add("6. Exit Program")
+            .add("Select:")
+            .toString();
 
     /**
      * Показываем все заявки
      */
     @Test
     public void showAllTest() {
+        System.setOut(new PrintStream(this.out));
         Input input = new StubInput(new String[] {"1", "6"});
         new StartUI(input, tracker).init();
+        assertThat(out.toString(), is(new StringJoiner(System.lineSeparator())
+                .add(menu)
+                .add("------------ List of all orders --------------")
+                .add("ID: " + item.getId() + " Name: " + item.getName() + " Created: " + item.getTime())
+                .add("------------ End of list orders --------------")
+                .add(menu)
+                .add ("------------ The program has completed --------------")
+                .add("")
+                .toString()
+                ));
+        System.setOut(this.stdout);
     }
 
 
