@@ -10,7 +10,7 @@ public class SquareTest {
     public void drawSquare() {
         Square square = new Square();
         assertThat(square.draw(),
-                is (new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                is(new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("++++")
                 .add("++++")
                 .add("++++")

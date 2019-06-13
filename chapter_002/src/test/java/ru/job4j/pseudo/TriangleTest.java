@@ -10,7 +10,7 @@ public class TriangleTest {
     public void drawTriangle() {
         Triangle triangle = new Triangle();
         assertThat(triangle.draw(),
-                is (new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                is(new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                         .add("+")
                         .add("++")
                         .add("+++")

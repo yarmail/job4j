@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 
-import org.hamcrest.core.StringContains;
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -54,13 +53,27 @@ public class StartUITest {
                 .add("ID: " + item.getId() + " Name: " + item.getName() + " Created: " + item.getTime())
                 .add("------------ End of list orders --------------")
                 .add(menu)
-                .add ("------------ The program has completed --------------")
+                .add("------------ The program has completed --------------")
                 .add("")
                 .toString()
                 ));
         System.setOut(this.stdout);
     }
 
+    @Test
+    public void findByIdTest() {
+        Input input = new StubInput(new String[] {"4", item.getId(), "6"});
+        new StartUI(input, tracker).init();
+        assertThat(tracker.findById(item.getId()).getName(), is("test name"));
+
+    }
+
+    @Test
+    public void findByNameTest() {
+        Input input = new StubInput(new String[] {"5", "test name", "6"});
+        new StartUI(input, tracker).init();
+        assertThat(tracker.findByName("test name").length, is(1));
+    }
 
     /**
      * addItemTest

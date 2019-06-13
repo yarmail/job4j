@@ -70,7 +70,7 @@ public class PaintTest {
     @Test
     public void drawSquare() {
     new Paint().draw(new Square());
-        assertThat(this.out.toString(), is (new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+        assertThat(this.out.toString(), is(new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("++++")
                 .add("++++")
                 .add("++++")
@@ -82,7 +82,7 @@ public class PaintTest {
     @Test
     public void drawTriangle() {
         new Paint().draw(new Triangle());
-        assertThat(this.out.toString(), is (new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+        assertThat(this.out.toString(), is(new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("+")
                 .add("++")
                 .add("+++")
