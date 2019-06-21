@@ -9,7 +9,10 @@ interface Input {
 
     /**
      * The ask method asks the user for information.
-     * Метод ask запрашивает у пользователя информацию     *
+     * Метод ask запрашивает у пользователя информацию
      */
     String ask(String question);
+
+    int ask(String question, int[] range);
+
 }

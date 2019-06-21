@@ -59,4 +59,12 @@ public class MenuTracker {
             }
         }
     }
+
+    public int[] range() {
+        int[] range = new int[this.actions.size()];
+        for (int i = 0; i < range.length; i++) {
+            range[i] = i;
+        }
+        return range;
+    }
 }
