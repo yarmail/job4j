@@ -22,7 +22,7 @@ public class DeleteItem implements UserAction {
 
     @Override
     public String info() {
-        return "4. Delete Order";
+        return "3. Delete order";
     }
 
 }

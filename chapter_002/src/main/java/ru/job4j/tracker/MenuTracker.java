@@ -4,31 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuTracker {
-    /**
-     * @param хранит ссылку на объект .
-     */
+
     private Input input;
-    /**
-     * @param хранит ссылку на объект .
-     */
     private Tracker tracker;
     /**
-     * @param хранит ссылку на массив типа UserAction.
+     * хранит ссылку на массив типа UserAction.
      */
     private List<UserAction> actions = new ArrayList<>();
 
     /**
-     * Конструктор.
-     *
-     * @param input   объект типа Input
-     * @param tracker объект типа Tracker
+     * Конструктор 1
      */
     public MenuTracker(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
     }
 
-     /**
+    /**
+     * Конструктор 2
+     */
+    public MenuTracker() {
+    }
+
+
+    /**
      * Метод заполняет массив.
      */
     public void fillActions() {

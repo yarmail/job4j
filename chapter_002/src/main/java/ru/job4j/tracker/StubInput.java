@@ -33,12 +33,12 @@ public class StubInput implements Input {
      * @param question
      * @return
      */
-    @Override
     public String ask(String question) {
         return this.value[this.position++];
     }
-    @Override
+
     public int ask(String question, int[] range) {
-        return -1;
+        int key = Integer.valueOf(this.ask(question));
+        return key;
     }
 }

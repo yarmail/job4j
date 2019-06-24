@@ -20,7 +20,7 @@ public class AddItem implements UserAction {
 
     @Override
     public String info() {
-        return "0. Add new Order";
+        return "0. Add new order";
     }
 }
 

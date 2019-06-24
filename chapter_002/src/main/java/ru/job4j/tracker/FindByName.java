@@ -24,6 +24,6 @@ public class FindByName implements UserAction {
 
     @Override
     public String info() {
-        return "6. Find order by name";
+        return "5. Find order by name";
     }
 }
