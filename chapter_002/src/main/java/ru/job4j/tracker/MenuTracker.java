@@ -40,7 +40,7 @@ public class MenuTracker {
     }
 
     /**
-     * Метод в зависимости от указанного ключа, выполняет соотвествующие действие.
+     * Метод в зависимости от указанного ключа, выполняет соответcтвующее действие.
      *
      * @param key ключ операции
      */
@@ -58,6 +58,11 @@ public class MenuTracker {
             }
         }
     }
+
+    /**
+     * Массив с числами пунктов меню
+     * @return int[] array
+     */
 
     public int[] range() {
         int[] range = new int[this.actions.size()];

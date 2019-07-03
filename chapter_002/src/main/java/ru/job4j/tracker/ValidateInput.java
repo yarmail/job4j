@@ -8,6 +8,8 @@ package ru.job4j.tracker;
  */
 public class ValidateInput implements Input  {
     private final Input input;
+    private String question;
+    private int[] range;
 
     public ValidateInput(final Input input) {
         this.input = input;
@@ -17,10 +19,18 @@ public class ValidateInput implements Input  {
         return this.input.ask(question);
     }
 
-    public int ask(String question, int[] range) {
+    public int ask(String question, int[] range){
+        this.question = question;
+        this.range = range;
+        int value = this.validate(this.question, this.range);
+        return value;
+    }
+
+    public int validate(String question, int[] range){
         boolean invalid = true;
         int value = -1;
         do {
+            value = this.input.ask(question, range);
             try {
                 value = this.input.ask(question, range);
                 invalid = false;
@@ -30,6 +40,6 @@ public class ValidateInput implements Input  {
                 System.out.println("Please enter validate data again");
             }
         } while (invalid);
-            return value;
-        }
+        return value;
     }
+}

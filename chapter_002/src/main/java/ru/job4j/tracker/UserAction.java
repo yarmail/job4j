@@ -5,11 +5,13 @@ package ru.job4j.tracker;
  * в котором определить методы, общие для всех событий.
  */
 interface UserAction {
+
     /**
      *  Метод возвращает ключ опции.
      * @return ключ
      */
     int key();
+
     /**
      * Основной метод.
      * @param input объект типа Input
