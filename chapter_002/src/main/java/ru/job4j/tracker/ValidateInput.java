@@ -19,14 +19,14 @@ public class ValidateInput implements Input  {
         return this.input.ask(question);
     }
 
-    public int ask(String question, int[] range){
+    public int ask(String question, int[] range) {
         this.question = question;
         this.range = range;
         int value = this.validate(this.question, this.range);
         return value;
     }
 
-    public int validate(String question, int[] range){
+    public int validate(String question, int[] range) {
         boolean invalid = true;
         int value = -1;
         do {
