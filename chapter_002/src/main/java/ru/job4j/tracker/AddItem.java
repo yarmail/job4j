@@ -1,10 +1,10 @@
 package ru.job4j.tracker;
 
-public class AddItem implements UserAction {
+public class AddItem extends BaseAction {
 
-    @Override
-    public int key() {
-        return 0;
+
+    public AddItem(int key, String name) {
+        super(key, name);
     }
 
     @Override
@@ -17,10 +17,4 @@ public class AddItem implements UserAction {
         tracker.add(item);
         System.out.println("------------ New order with number: " + item.getId() + " created");
     }
-
-    @Override
-    public String info() {
-        return "0. Add new order";
-    }
 }
-
