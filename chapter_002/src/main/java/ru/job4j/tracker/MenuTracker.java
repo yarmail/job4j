@@ -31,12 +31,12 @@ public class MenuTracker {
      * Метод заполняет массив.
      */
     public void fillActions() {
-        this.actions.add(0, new AddItem(0, "Add item"));
-        this.actions.add(1, new ShowAllItem());
-        this.actions.add(2, new UpdateItem());
-        this.actions.add(3, new DeleteItem());
-        this.actions.add(4, new FindById());
-        this.actions.add(5, new FindByName());
+        this.actions.add(0, new AddItem(0, "0. Add item"));
+        this.actions.add(1, new ShowAllItem(1, "1. Show all order"));
+        this.actions.add(2, new UpdateItem(2, "2. Edit order"));
+        this.actions.add(3, new DeleteItem(2, "3. Delete order"));
+        this.actions.add(4, new FindById(4, "4.Find order by ID"));
+        this.actions.add(5, new FindByName(5, "5. Find order by name"));
     }
 
     /**

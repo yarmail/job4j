@@ -1,10 +1,9 @@
 package ru.job4j.tracker;
 
-public class FindById implements UserAction {
+public class FindById extends BaseAction {
 
-    @Override
-    public int key() {
-        return 4;
+    public FindById(int key, String name) {
+        super(key, name);
     }
 
     @Override
@@ -19,10 +18,4 @@ public class FindById implements UserAction {
             System.out.println("Find Order Id: " + result.getId() + " Name: " + result.getName() + " Created: " + result.getTime());
         }
     }
-
-    @Override
-    public String info() {
-        return "4. Find order by ID";
-    }
-
 }

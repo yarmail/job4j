@@ -1,10 +1,9 @@
 package ru.job4j.tracker;
 
-public class FindByName implements UserAction {
+public class FindByName extends BaseAction {
 
-    @Override
-    public int key() {
-        return 5;
+    public FindByName(int key, String name) {
+        super(key, name);
     }
 
     @Override
@@ -20,10 +19,5 @@ public class FindByName implements UserAction {
                 System.out.println("Id: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime());
             }
         }
-    }
-
-    @Override
-    public String info() {
-        return "5. Find order by name";
     }
 }

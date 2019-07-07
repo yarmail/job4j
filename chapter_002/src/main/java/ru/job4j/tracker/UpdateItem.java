@@ -1,10 +1,9 @@
 package ru.job4j.tracker;
 
-public class UpdateItem implements UserAction {
+public class UpdateItem extends BaseAction {
 
-    @Override
-    public int key() {
-        return 2;
+    public UpdateItem(int key, String name) {
+        super(key, name);
     }
 
     @Override
@@ -22,10 +21,5 @@ public class UpdateItem implements UserAction {
         if (!result) {
             System.out.println("------------ Edit operation failed --------------");
         }
-    }
-
-    @Override
-    public String info() {
-        return "2. Edit order";
     }
 }

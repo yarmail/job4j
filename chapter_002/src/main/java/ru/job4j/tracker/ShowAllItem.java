@@ -1,10 +1,9 @@
 package ru.job4j.tracker;
 
-public class ShowAllItem implements UserAction {
+public class ShowAllItem extends BaseAction {
 
-    @Override
-    public int key() {
-        return 1;
+    public ShowAllItem(int key, String name) {
+        super(key, name);
     }
 
     @Override
@@ -21,11 +20,4 @@ public class ShowAllItem implements UserAction {
             System.out.println("------------ End of list orders --------------");
         }
     }
-
-    @Override
-    public String info() {
-        return "1. Show all order";
-    }
-
 }
-
