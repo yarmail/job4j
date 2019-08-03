@@ -55,6 +55,11 @@ public class Logic {
         this.index = 0;
     }
 
+    /**
+     * (дублирование кода из класса Logic Puzzle)
+     * @param cell
+     * @return
+     */
     private int findBy(Cell cell) {
         int rst = -1;
         for (int index = 0; index != this.figures.length; index++) {
