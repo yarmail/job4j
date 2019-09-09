@@ -17,7 +17,7 @@ public class LogicTest {
      * должен сработать класс исключение FigureNotFoundException
      */
     @Test (expected = FigureNotFoundException.class)
-    public void figureNotFound(){
+    public void figureNotFound() {
         logic.move(Cell.E7, Cell.E5);
     }
 
@@ -34,7 +34,7 @@ public class LogicTest {
      * this.figures[index].copy(dest)
      */
     @Test
-    public void pawnBlackMove(){
+    public void pawnBlackMove() {
         logic.add(new PawnBlack(Cell.E7));
         boolean result = logic.move(Cell.E7, Cell.E6);
         assertThat(result, is(true));
@@ -48,7 +48,7 @@ public class LogicTest {
      * и проверить это
      */
     @Test (expected = OccupiedWayException.class)
-    public void pawnCannotMove(){
+    public void pawnCannotMove() {
         logic.add(new PawnBlack(Cell.E7));
         logic.add(new PawnBlack(Cell.E6));
         logic.move(Cell.E7,  Cell.E6);
@@ -60,7 +60,7 @@ public class LogicTest {
      * неправильно, например на 2 клетки
      */
     @Test (expected = ImpossibleMoveException.class)
-    public void pawnImpossibleMove(){
+    public void pawnImpossibleMove() {
         logic.add(new PawnBlack(Cell.E7));
         logic.move(Cell.E7, Cell.E5);
     }

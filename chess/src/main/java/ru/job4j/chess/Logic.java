@@ -46,8 +46,9 @@ public class Logic {
     public boolean move(Cell source, Cell dest) {
         boolean rst = false;
         int index = this.findBy(source);
-        if (index == -1)
+        if (index == -1) {
             throw new FigureNotFoundException("Фигура не найдена");
+        }
 
         if (index != -1) {
             Cell[] steps = this.figures[index].way(source, dest);
