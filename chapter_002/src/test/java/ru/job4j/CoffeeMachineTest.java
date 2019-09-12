@@ -20,4 +20,16 @@ public class CoffeeMachineTest {
         ArrayList<Integer> result = coffeeMachine.changeMachine(money, price);
         assertThat(result, is(answer));
     }
+
+    @Test
+    public void changeMachineTest2() {
+        int money = 50;
+        int price = 20;
+        ArrayList<Integer> answer = new ArrayList<>(Arrays.asList(10, 10, 10));
+
+        CoffeeMachine coffeeMachine = new CoffeeMachine();
+        ArrayList<Integer> result = coffeeMachine.changeMachine(money, price);
+        assertThat(result, is(answer));
+    }
 }
+
