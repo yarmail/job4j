@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * Directory Model
  * Модель справочника
+ * Поиск данных в списках.
  */
 public class PhoneDictionary {
     private ArrayList<Person> persons = new ArrayList<>();
