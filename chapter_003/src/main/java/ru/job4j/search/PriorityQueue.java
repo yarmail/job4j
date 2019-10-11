@@ -1,30 +1,44 @@
 package ru.job4j.search;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 /**
  * Очередь с приоритетом на LinkedList
  * Есть правда PriorityQueue, но делаем на LinkedList
  *
+ * Для вставки элементов в середину LinkedList
+ * дучше использовать Iterator
+ *
  */
-
 public class PriorityQueue {
     private LinkedList<Task> tasks = new LinkedList<>();
 
-    /**
-     * Если параметр priority у task < проверяемого -
-     * size принимает значение индекса позиции,
-     * в которую пойдет новый элемент
+     /**
+     * Вводим итератор. Итератор показвает на текущий элемент или между
+     * текущим и следующим.
      */
     public void put(Task task) {
-        int size = tasks.size();
-        for (int i = 0; i < tasks.size(); i++) {
-            if (task.getPriority() < tasks.get(i).getPriority()) {
-                size = tasks.indexOf(tasks.get(i));
-                break;
+
+        if (this.tasks.size() > 1) {
+            ListIterator<Task> itr = this.tasks.listIterator();
+            while (itr.hasNext()) {
+                if (task.getPriority() < itr.next().getPriority()) {
+                    itr.add(task);
+                    break;
+                }
             }
         }
-        tasks.add(size, task);
+        if (this.tasks.size() == 1) {
+            ListIterator<Task> itr = this.tasks.listIterator();
+            if (task.getPriority() < itr.next().getPriority()) {
+                itr.previous();
+                itr.add(task);
+            }
+        }
+        if (this.tasks.isEmpty()) {
+                this.tasks.add(task);
+        }
     }
 
     /**
