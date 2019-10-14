@@ -41,11 +41,6 @@ public class PriorityQueue {
         }
     }
 
-    /**
-     * Метод должен вставлять в нужную позицию элемент.
-     * Позиция определять по полю приоритет.
-     * Для вставки использовать add(int index, E value)
-     */
     public Task take() {
         return this.tasks.poll();
     }
