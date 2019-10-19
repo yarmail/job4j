@@ -35,12 +35,11 @@ public class ConvertList2Array {
 
     public List<Integer> convert(List<int[]> list) {
         List<Integer> result = new ArrayList<>();
-        Iterator<int[]> itr = list.iterator();
-        while (itr.hasNext()) {
-            for (int value : itr.next()) {
-                result.add(value);
+        for (int[] i : list) {
+            for (int j : i) {
+                result.add(j);
             }
         }
         return result;
+        }
     }
-}
