@@ -182,8 +182,10 @@ public class BaseSyntHunt4 {
      */
     @Test
     public void shotAnd() {
+/*
         boolean result = 2 > 0 && 3 < 5 && !false;
         System.out.println(result);
+*/
     }
 
     /**

@@ -7,6 +7,7 @@ import static org.junit.Assert.assertThat;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import java.util.List;
 import java.util.StringJoiner;
 
 
@@ -69,7 +70,7 @@ public class StartUITest {
     public void findByNameTest() {
         Input input = new StubInput(new String[] {"5", "test name", "y"});
         new StartUI(input, tracker).init();
-        assertThat(tracker.findByName("test name").length, is(1));
+        assertThat(tracker.findByName("test name").size(), is(1));
     }
 
     /**
@@ -92,7 +93,7 @@ public class StartUITest {
     public void addItemTest() {
         Input input = new StubInput(new String[] {"0", "test name", "desc", "y"});
         new StartUI(input, tracker).init();
-        assertThat(tracker.findAll()[0].getName(), is("test name"));
+        assertThat(tracker.findAll().get(0).getName(), is("test name"));
     }
 
     /**
@@ -127,7 +128,7 @@ public class StartUITest {
     public void deleteTest() {
         Input input = new StubInput(new String[] {"3", item.getId(), "y"});
         new StartUI(input, tracker).init();
-        Item[] result = tracker.findByName("test name");
-        assertThat((result.length), is(0));
+        List<Item> result = tracker.findByName("test name");
+        assertThat((result.size()), is(0));
     }
 }

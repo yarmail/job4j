@@ -1,16 +1,23 @@
 package ru.job4j.tracker;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Arrays;
+
 
 /**
  * Class Tracker is a wrapper over an array
  * Класс Трекер - это обертка над массивом
  * items = массив для хранения заявок
  * position = после выполнение add() - показывает количество заявок
+ * ----------------------------
+ *     old version
+ *     private final Item[] items = new Item[100];
  */
 
 public class Tracker {
-    private final Item[] items = new Item[100];
+
+    private final  List<Item> items = new ArrayList<>(100);
     private int position = 0;
 
     /**
@@ -21,7 +28,7 @@ public class Tracker {
      * 1) currentTimeMillis() (~13 знаков)
      * 2) Math.random (~ 4 знака)
      * 3) привести к общему типу long и сложить
-     * 4) перевести в  String (в условиях дпнной задачи)
+     * 4) перевести в  String (в условиях данной задачи)
      *
      * @return String Id
      */
@@ -36,12 +43,12 @@ public class Tracker {
      * Аdd method adds ids and adds new order to storage
      * Метод добавляет id и добавляет новую заявку в хранилище
      *
-     * @param item новая заявка
-     * @return возвращает заявку с параметрами
+     * old version
+     * this.items[this.position++] = item;
      */
     public Item add(Item item) {
         item.setId(this.generateId());
-        this.items[this.position++] = item;
+        this.items.add(this.position++, item);
         return item;
     }
 
@@ -49,14 +56,17 @@ public class Tracker {
      * Search in array by id
      * Поиск ячейки в массиве по id
      *
-     * @param id
-     * @return Item result возвращает найденный Item, если он есть
+     * old version
+     * for (int i = 0; i < this.position; i++) {
+     * if ((this.items[i] != null) && (this.items[i].getId()).equals(id)) {
+     * result = items[i];
+     * break;
      */
     public Item findById(String id) {
         Item result = null;
-        for (int i = 0; i < this.position; i++) {
-            if ((this.items[i] != null) && (this.items[i].getId()).equals(id)) {
-                result = items[i];
+        for (Item item:items) {
+            if ((item != null) & (item.getId()).equals(id)) {
+                result = item;
                 break;
             }
         }
@@ -64,14 +74,20 @@ public class Tracker {
     }
 
     /**
-     * Getting a list of all applications
-     * Получение списка всех заявок
+     * Find all completed applications from the total
+     * Найти все заполненные заявки из общего объема
      *
-     * Предполагаю, что список заявок не содержит внутри себя нулевых элементов
-     * @return возвращает копию массива this.items без null элементов
+     * old version
+     * Item[] result = Arrays.copyOf(this.items, this.position);
      */
-    public Item[] findAll() {
-        Item[] result = Arrays.copyOf(this.items, this.position);
+    public List<Item> findAll() {
+        List<Item> result = new ArrayList<>(0);
+        if (this.position != 0 & this.position != items.size() - 1) {
+            result = items.subList(0, this.position);
+        }
+        if (this.position == items.size() - 1) {
+            result = items;
+        }
         return result;
     }
 
@@ -79,27 +95,23 @@ public class Tracker {
      * Search in array by name
      * Поиск в массиве по полю Name
      *
-     * Вижу 2 варианта:
-     * 1) (первый прогон) сначала посчитать счетчиком все совпадения,
-     * сделать новый маленький массив
-     * и заново найти уже с копированием (второй прогон) (версия не нашла поддержки куратора)
-     * 2) делаете временный массив длиной с позишен
-     * заполняете по счетчику и обрезаете до счетчика в Arrays.copyOf (делаем так)
-     * (мне кажется при больших массивах так будет нерационально использоваться память.)
-     *
-     * @param key
-     * @return result ARRAY массив у которых совпадает name.
+     * old version
+     * int count = 0;
+     * Item[] tmp = new Item[this.position];
+     * for (int i = 0; i < this.position; i++) {
+     * if ((this.items[i] != null) && (this.items[i].getName().equals(key))) {
+     * tmp[count] = this.items[i];
+     * count++;
+     *  Item[] result = Arrays.copyOf(tmp, count);
      */
-    public Item[] findByName(String key) {
-        int count = 0;
-        Item[] tmp = new Item[this.position];
-        for (int i = 0; i < this.position; i++) {
-            if ((this.items[i] != null) && (this.items[i].getName().equals(key))) {
-                tmp[count] = this.items[i];
-                count++;
+    public List<Item> findByName(String key) {
+
+        List<Item> result = new ArrayList<>(0);
+        for (Item item: items) {
+            if (item.getName().equals(key)) {
+                result.add(item);
             }
         }
-        Item[] result = Arrays.copyOf(tmp, count);
         return result;
     }
 
@@ -107,47 +119,51 @@ public class Tracker {
      * Delete applications
      * Удаление заявок (находим заявку по id)
      *
-     * @param id - на вход id заказа
-     * Находим позицию нужной заявки через id
-     * Не забываем изменить позицию при удалении
-     * @return result boolean удалось удалить или нет
+     * old version
+     * for (int i = 0; i < this.position; i++) {
+     * if ((this.items[i] != null) && this.items[i].getId().equals(id)) {
+     * System.arraycopy(this.items, (i + 1), this.items, i, this.position - (i + 1));
+     * this.position--;
+     * this.items[this.position] = null;
+     * result = true;
+     * break;
      */
 
     public boolean delete(String id) {
         boolean result = false;
-            for (int i = 0; i < this.position; i++) {
-                if ((this.items[i] != null) && this.items[i].getId().equals(id)) {
-                    System.arraycopy(this.items, (i + 1), this.items, i, this.position - (i + 1));
-                    this.position--;
-                    this.items[this.position] = null;
-                    result = true;
-                    break;
-                }
+        for (Item item : this.items) {
+            if (item.getId().equals(id)) {
+                items.remove(item);
+                this.position--;
+                result = true;
+                break;
             }
+        }
         return result;
     }
 
     /**
      * Replace application
      * Редактирование (замена) заявки
-     * <p>
-     * @param id (находим заявку по id)
-     * @param item новая заявка, которая заменит найденную в хранилище
-     * @return result насколько успешная операция
-     * "и добавьте строку item.setId(id); чтобы перезаписать id если он выставлен ошибочно"
-     * исправлено 15.05.2019
+     *
+     * old version
+     * for (int i = 0; i < this.position; i++) {
+     * if (this.items[i].getId().equals(id)) {
+     * items[i] = item;
+     * item.setId(id);
+     * result = true;
+     * break;
      */
 
     public boolean replace(String id, Item item) {
         boolean result = false;
-            for (int i = 0; i < this.position; i++) {
-                if (this.items[i].getId().equals(id)) {
-                    items[i] = item;
-                    item.setId(id);
-                    result = true;
-                    break;
-                }
+        for (Item i : this.items) {
+            if (i.getId().equals(id)) {
+                items.set(items.indexOf(i), item);
+                result = true;
+                break;
             }
+        }
         return result;
     }
 }

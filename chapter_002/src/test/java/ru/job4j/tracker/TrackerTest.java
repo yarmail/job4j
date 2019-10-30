@@ -1,9 +1,9 @@
 package ru.job4j.tracker;
 
+import java.util.List;
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-
 public class TrackerTest {
 
 
@@ -76,8 +76,8 @@ public class TrackerTest {
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
-        Item[] result = tracker.findAll();
-        assertThat((result.length), is(3));
+        List<Item> result = tracker.findAll();
+        assertThat((result.size()), is(3));
     }
 
     /**
@@ -99,8 +99,8 @@ public class TrackerTest {
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
-        Item[] result = tracker.findByName("test1");
-        assertThat((result.length), is(2));
+        List<Item> result = tracker.findByName("test1");
+        assertThat((result.size()), is(2));
     }
 
     /**
