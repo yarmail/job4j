@@ -2,8 +2,6 @@ package ru.job4j.tracker;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
-
 
 /**
  * Class Tracker is a wrapper over an array
@@ -18,7 +16,7 @@ import java.util.Arrays;
 public class Tracker {
 
     private final  List<Item> items = new ArrayList<>(100);
-    private int position = 0;
+
 
     /**
      * Generating a unique key based on the current time and a random number
@@ -48,7 +46,7 @@ public class Tracker {
      */
     public Item add(Item item) {
         item.setId(this.generateId());
-        this.items.add(this.position++, item);
+        this.items.add(item);
         return item;
     }
 
@@ -65,7 +63,7 @@ public class Tracker {
     public Item findById(String id) {
         Item result = null;
         for (Item item:items) {
-            if ((item != null) & (item.getId()).equals(id)) {
+            if ((item != null) && (item.getId()).equals(id)) {
                 result = item;
                 break;
             }
@@ -81,14 +79,7 @@ public class Tracker {
      * Item[] result = Arrays.copyOf(this.items, this.position);
      */
     public List<Item> findAll() {
-        List<Item> result = new ArrayList<>(0);
-        if (this.position != 0 & this.position != items.size() - 1) {
-            result = items.subList(0, this.position);
-        }
-        if (this.position == items.size() - 1) {
-            result = items;
-        }
-        return result;
+         return this.items;
     }
 
     /**
@@ -131,10 +122,9 @@ public class Tracker {
 
     public boolean delete(String id) {
         boolean result = false;
-        for (Item item : this.items) {
-            if (item.getId().equals(id)) {
-                items.remove(item);
-                this.position--;
+        for (int i = 0; i < this.items.size(); i++) {
+            if (this.items.get(i).getId().equals(id)) {
+                items.remove(i);
                 result = true;
                 break;
             }
@@ -157,9 +147,9 @@ public class Tracker {
 
     public boolean replace(String id, Item item) {
         boolean result = false;
-        for (Item i : this.items) {
-            if (i.getId().equals(id)) {
-                items.set(items.indexOf(i), item);
+        for (int i = 0; i < this.items.size(); i++) {
+            if (this.items.get(i).getId().equals(id)) {
+                items.set(i, item);
                 result = true;
                 break;
             }
