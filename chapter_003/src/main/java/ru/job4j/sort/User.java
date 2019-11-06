@@ -7,7 +7,7 @@ package ru.job4j.sort;
  * ---------------------------------------------
  * Old version
  * В классе User
- * @Override
+ * Override
  * public String toString() {
  * return String.format("User: %s, %s", this.name, this.age);
  * }
