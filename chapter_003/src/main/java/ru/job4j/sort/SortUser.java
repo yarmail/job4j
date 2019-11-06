@@ -9,12 +9,10 @@ import java.util.TreeSet;
  *  public Set<User> sort (List<User>), который будет
  *  возвращать TreeSet пользователей, отсортированных
  *  по возрасту в порядке возрастания.
- *  Странно: result - local variable is redundant
  */
 public class SortUser {
 
     public Set<User> sort(List<User> list) {
-        Set<User> result = new TreeSet<>(list);
-        return result;
+        return new TreeSet<>(list);
     }
 }
