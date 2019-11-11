@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class Tracker {
 
-    private final  List<Item> items = new ArrayList<>(100);
+    private final  List<Item> items = new ArrayList<>(0);
 
 
     /**
