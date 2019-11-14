@@ -135,6 +135,7 @@ public class Tracker {
     /**
      * Replace application
      * Редактирование (замена) заявки
+     * Важно: при замене заявки заменить и её ID из новой
      *
      * old version
      * for (int i = 0; i < this.position; i++) {
@@ -150,6 +151,7 @@ public class Tracker {
         for (int i = 0; i < this.items.size(); i++) {
             if (this.items.get(i).getId().equals(id)) {
                 items.set(i, item);
+                item.setId(id);
                 result = true;
                 break;
             }

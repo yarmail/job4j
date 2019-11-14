@@ -28,11 +28,11 @@ public class ValidateInput implements Input  {
 
     public int validate(String question, int[] range) {
         boolean invalid = true;
-        int value = -1;
+        int result = -1;
         do {
-            value = this.input.ask(question, range);
+            result = this.input.ask(question, range);
             try {
-                value = this.input.ask(question, range);
+                result = this.input.ask(question, range);
                 invalid = false;
             } catch (MenuOutException moe) {
                 System.out.println("Please select key from menu");
@@ -40,6 +40,6 @@ public class ValidateInput implements Input  {
                 System.out.println("Please enter validate data again");
             }
         } while (invalid);
-        return value;
+        return result;
     }
 }

@@ -30,16 +30,20 @@ public class StartUITest {
      * Подключаем меню для влючения в буфер
      */
     private final String menu = new StringJoiner(System.lineSeparator())
-            .add("0. Add new order")
-            .add("1. Show all order")
-            .add("2. Edit order")
-            .add("3. Delete order")
-            .add("4. Find order by ID")
-            .add("5. Find order by name")
+            .add("0.Add new order")
+            .add("1.Show all order")
+            .add("2.Edit order")
+            .add("3.Delete order")
+            .add("4.Find order by ID")
+            .add("5.Find order by name")
             .toString();
 
     /**
+     * Show all orders
      * Показываем все заявки
+     * assertThat:
+     * out.toString() - реальныый выход (actual)
+     * is(new StringJoiner(System.lineSeparator()) - меню, которе мы создали (expected)
      */
     @Test
     public void showAllTest() {
