@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/yarmail/job4j.svg?branch=master)](https://travis-ci.org/yarmail/job4j)
+[![codecov](https://codecov.io/gh/yarmail/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/yarmail/job4j)
+
 Yaroslav Tsinovskiy (Yar Tsin)<br> 
 position: Learning, internship @ look for work Junior Java<br> 
 location: Moscow<br>
@@ -88,5 +91,5 @@ using the permutation or "bubble sort method"
  
 ##### package Puzzle
 * Puzzle.Logic.isWin. It is necessary to check that in the array the units form a row vertically and horizontally of the necessary size.  
- *(Нужно проверить что в массиве единицы образуют ряд по вертикали и горизонтали нужно размера.)*
+ *(Нужно проверить что в массиве единицы образуют ряд по вертикали и горизонтали нужного размера.)*
  
