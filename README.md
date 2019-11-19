@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/yarmail/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/yarmail/job4j)
 
 Yaroslav Tsinovskiy (Yar Tsin)<br> 
-position: Learning, internship @ look for work Junior Java<br> 
+position: Learning, internship @ look for work Java Developer<br> 
 location: Moscow<br>
 email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
@@ -13,6 +13,12 @@ https://www.facebook.com/YarTsin
 
 ---
 #### Chapter 2. OOP (Object-oriented programming)
+
+##### package CoffeeMachine 
+* Known interesting task in which you need to create 
+an algorithm for issuing change with a minimum set of coins.
+ *(Известная интересная зачача, в которой нужно 
+создать алгоритм выдачи сдачи минимальным набором монет)*
 
 ##### package Tracker
 * Console program for working with tasks.

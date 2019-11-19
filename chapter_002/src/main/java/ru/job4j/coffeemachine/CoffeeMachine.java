@@ -1,7 +1,9 @@
-package ru.job4j;
+package ru.job4j.coffeemachine;
 import java.util.ArrayList;
 
 /**
+ * It is necessary to implement the method
+ * of issuing change for the machine.
  * Задание Кофемашина. [#34741]
  * Надо реализовать метод выдачи сдачи для автомата.
  *
