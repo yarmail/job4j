@@ -30,7 +30,6 @@ public class ValidateInput implements Input  {
         boolean invalid = true;
         int result = -1;
         do {
-            result = this.input.ask(question, range);
             try {
                 result = this.input.ask(question, range);
                 invalid = false;
