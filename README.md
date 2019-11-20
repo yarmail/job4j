@@ -7,15 +7,15 @@ location: Moscow<br>
 email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
 
----
+
+## job4j.ru JAVA internship work completed.   
+*(Выполненные работы по практическому курсу JAVA job4j.ru)*
+
 ##### Used tools:
 *(TrackStudio, Git, IDEA, JavaFX, Maven,
 JavaDoc, СheckStyle, 
 JUnit, Hamcrest, JaCoCo, Travis CI, Codecov.io)*  
 <br><br>
-
-## job4j.ru JAVA internship work completed.   
-*(Выполненные работы по практическому курсу JAVA job4j.ru)*
 
 ---
 #### Chapter 2. OOP (Object-oriented programming)
