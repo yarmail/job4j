@@ -7,11 +7,11 @@ location: Moscow<br>
 email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
 ---
-### Used tools.
+##### Used tools:
 TrackStudio, Git, IDEA, JavaFX, Maven<br>
 Javadoc, Сheckstyle<br> 
 Junit, Hamcrest, Jacoco, travis-ci, codecov.io<br>  
-
+<br>
 ### job4j.ru JAVA internship work completed.   
 *(Выполненные работы по практическому курсу JAVA job4j.ru)*
 
