@@ -12,9 +12,9 @@ https://www.facebook.com/YarTsin
 *(Выполненные работы по практическому курсу JAVA job4j.ru)*
 
 ##### Used tools:
-*(TrackStudio, Git, IDEA, JavaFX, Maven,
-JavaDoc, СheckStyle, 
-JUnit, Hamcrest, JaCoCo, Travis CI, Codecov.io)*  
+TrackStudio, Git, IDEA, JavaFX, Maven <br>
+JavaDoc, СheckStyle <br> 
+JUnit, Hamcrest, JaCoCo, Travis CI, Codecov.io  
 <br><br>
 
 ---
