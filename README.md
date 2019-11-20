@@ -8,7 +8,7 @@ email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
 <br><br>
 
-## Completed work in job4j.ru   
+## Completed work 
 *(Выполненные работы)*
 
 ##### Used tools:
