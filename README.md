@@ -6,9 +6,9 @@ position: Learning, internship @ look for work Java Developer<br>
 location: Moscow<br>
 email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
-
+---
 ### Used tools.
-IDEA, JavaFX, Maven<br>
+TrackStudio, Git, IDEA, JavaFX, Maven<br>
 Javadoc, Сheckstyle<br> 
 Junit, Hamcrest, Jacoco, travis-ci, codecov.io<br>  
 
