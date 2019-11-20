@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/yarmail/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/yarmail/job4j)
 
 Yaroslav Tsinovskiy (Yar Tsin)<br> 
-position: Learning, internship @ look for work Java Developer<br> 
+position: Java Developer<br> 
 location: Moscow<br>
 email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
