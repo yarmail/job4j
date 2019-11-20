@@ -8,8 +8,8 @@ email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
 <br><br>
 
-## job4j.ru JAVA internship work completed.   
-*(Выполненные работы по практическому курсу JAVA job4j.ru)*
+## Completed work in job4j.ru   
+*(Выполненные работы)*
 
 ##### Used tools:
 TrackStudio, Git, IDEA, JavaFX, Maven <br>
