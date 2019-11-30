@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 /**
+ * 1 вариант
  * The bank class performs various operations with user accounts
  * Класс банк выполняет различные операции со счетами пользователей
  */

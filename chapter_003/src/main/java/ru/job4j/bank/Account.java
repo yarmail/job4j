@@ -6,15 +6,15 @@ package ru.job4j.bank;
  *
  * Содержит поля:
  * sum - деньги
- * requisites - реквизиты счета
+ * requisite - реквизиты счета
  */
 public class Account {
     private double sum;
-    private String requisites;
+    private String requisite;
 
-    public Account(double sum, String requisites) {
+    public Account(double sum, String requisite) {
         this.sum = sum;
-        this.requisites = requisites;
+        this.requisite = requisite;
     }
 
     public double getSum() {
@@ -25,12 +25,12 @@ public class Account {
         this.sum = sum;
     }
 
-    public String getRequisites() {
-        return requisites;
+    public String getRequisite() {
+        return requisite;
     }
 
-    public void setRequisites(String requisites) {
-        this.requisites = requisites;
+    public void setRequisite(String requisite) {
+        this.requisite = requisite;
     }
 
 }
