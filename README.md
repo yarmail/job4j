@@ -22,7 +22,7 @@ JUnit, Hamcrest, JaCoCo, Travis CI, Codecov.io
 
 ##### package Bank
 List of bank accounts. Implement a list of user 
-accounts using the collection Map
+accounts using the collection Map <br>
  *(Реализовать список счетов пользователя используя 
  коллекцию Map)*
 
