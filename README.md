@@ -74,6 +74,7 @@ top of the list
 Sort user using Comparable and Comparator
  *(Сортировка пользователей с использованием
 Comparable и Comparator)* 
+
 ---
 #### Chapter 2. OOP (Object-oriented programming)
 
@@ -97,6 +98,7 @@ get a task by ID. <br>
 ##### package Profession
 Create classes of professions with extends <br> 
  *(создать классы профессий с наследованием)*
+ 
 ---
 #### Chapter 1. Basic syntax (array, condition, loop, etc)
 
