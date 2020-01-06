@@ -17,6 +17,6 @@ package ru.job4j.peerview;
  * 2. Классы Bank и Sorter требуют класса User
  * Если класс User не реализует класс Comparable, то TreeSet и Treemap
  * в этих классах не отсортированы
- * 3. Maven Validate насчитал 8 ошибок чекчстайла
+ * 3. Maven Validate насчитал 8 ошибок чекстайла
  *
  */

@@ -8,7 +8,7 @@ import java.util.ListIterator;
  * Есть правда PriorityQueue, но делаем на LinkedList
  *
  * Для вставки элементов в середину LinkedList
- * дучше использовать Iterator
+ * лучше использовать Iterator
  *
  */
 public class PriorityQueue {
