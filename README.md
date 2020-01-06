@@ -43,13 +43,13 @@ order using the TreeSet collection
  
 ##### package List (convert)
 * ConvertList2Array. Convert List to a 
-two-dimensional array.
+two-dimensional array. <br>
  *(Сконвертировать List в двумерный массив)*
 * ConvertMatrix2List. Convert two-dimensional 
-array to List.   
+array to List.   <br>
  *(Сконвертировать двумерный массив в List)*
 * UserConvert. Convert user list from List to 
-HashMap  
+HashMap  <br>
  *(Сконвертировать список пользователей из 
 коллекции List в колекцию HashMap)*
 
