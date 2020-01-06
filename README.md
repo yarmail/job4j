@@ -23,20 +23,20 @@ JUnit, Hamcrest, JaCoCo, Travis CI, Codecov.io
 ##### package Bank
 List of bank accounts. Implement a list of user 
 accounts using the collection Map <br>
- *(Реализовать список счетов пользователя используя 
+ *(реализовать список счетов пользователя используя 
  коллекцию Map)*
 
 ##### package Comparator
 Create a Comparator for strings. Compare 2 words character 
 by character. You cannot use the String.compareTo method.
- *(Создать компаратор для строк. Сравнить 2 слова посимвольно.
+ *(создать компаратор для строк. Сравнить 2 слова посимвольно.
 Нельзя использовать метод String.compateTo)*
 
 ##### package DepartamentSort
 Create an organization directory in which to sort the 
 names of units in a hierarchical and lexicographical 
 order using the TreeSet collection 
- *(Создать справочник организации, в котором 
+ *(создать справочник организации, в котором 
  отсортировать названия подразделений в иерархическом 
  и лексографическом порядке, используя 
  коллекцию TreeSet)*
@@ -44,35 +44,35 @@ order using the TreeSet collection
 ##### package List (convert)
 * ConvertList2Array. Convert List to a 
 two-dimensional array. <br>
- *(Сконвертировать List в двумерный массив)*
+ *(сконвертировать List в двумерный массив)*
 * ConvertMatrix2List. Convert two-dimensional 
 array to List.   <br>
- *(Сконвертировать двумерный массив в List)*
+ *(сконвертировать двумерный массив в List)*
 * UserConvert. Convert user list from List to 
 HashMap  <br>
- *(Сконвертировать список пользователей из 
+ *(сконвертировать список пользователей из 
 коллекции List в колекцию HashMap)*
 
 ##### package Peerview
 Check the source code (using collections) 
 and make suggestions to improve its quality.
- *(Проверить исходный код (использование коллекций)
+ *(проверить исходный код (использование коллекций)
 и внести свои предложения по улучшению его качества)*
 
 ##### package Search
 * PhoneDictionary. Search in a notebook for 
-a partial set of characters in any fields.
- *(Поиск в записной книжке по частичному 
+a partial set of characters in any fields. <br>
+ *(поиск в записной книжке по частичному 
 набору символов в любых полях)*
 * PriorityQueue. We change the task list so 
 that the most important tasks are at the 
-top of the list
- *(Меняем список задач так, что бы наиболее 
+top of the list <br>
+ *(меняем список задач так, что бы наиболее 
 важные задачи стояли вначале списка)*
 
 ##### package Sort
 Sort user using Comparable and Comparator
- *(Сортировка пользователей с использованием
+ *(сортировка пользователей с использованием
 Comparable и Comparator)* 
 
 ---
@@ -81,7 +81,7 @@ Comparable и Comparator)*
 ##### package CoffeeMachine 
 Known interesting task in which you need to create 
 an algorithm for issuing change with a minimum set of coins.
- *(Известная интересная зачача, в которой нужно 
+ *(известная интересная зачача, в которой нужно 
 создать алгоритм выдачи сдачи минимальным набором монет)*
 
 ##### package Tracker
