@@ -25,4 +25,22 @@ public class CalculatorTest {
         );
         assertThat(buffer, is(Arrays.asList(1D, 2D, 3D)));
     }
+
+    /**
+     *  ССЫЛКИ НА МЕТОДЫ
+     *  MathUtil::add - статические
+     *  buffer::add - не статические - от переменной
+     *
+     */
+    @Test
+    public void whenAdd1Until4() {
+        Calculator calc = new Calculator();
+        List<Double> buffer = new ArrayList<>();
+        calc.multiple(
+                0, 3, 1,
+                MathUtil::add, //static call
+                buffer::add // non-static call
+        );
+        assertThat(buffer, is(Arrays.asList(1D, 2D, 3D)));
+    }
 }
