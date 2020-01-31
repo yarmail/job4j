@@ -2,11 +2,13 @@ package ru.job4j.tracker;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class MenuTracker {
 
     private Input input;
     private Tracker tracker;
+    private final Consumer<String> output;
     /**
      * хранит ссылку на массив типа UserAction.
      */
@@ -15,9 +17,10 @@ public class MenuTracker {
     /**
      * Конструктор 1
      */
-    public MenuTracker(Input input, Tracker tracker) {
+    public MenuTracker(Input input, Tracker tracker, Consumer<String> output) {
         this.input = input;
         this.tracker = tracker;
+        this.output = output;
     }
 
     /**
@@ -42,7 +45,7 @@ public class MenuTracker {
     /**
      * Метод в зависимости от указанного ключа, выполняет соответcтвующее действие.
      *
-     * @param key ключ операции
+     * @param key ключ операции+
      */
     public void select(int key) {
         this.actions.get(key).execute(this.input, this.tracker);
@@ -54,7 +57,7 @@ public class MenuTracker {
     public void show() {
         for (UserAction action : this.actions) {
             if (action != null) {
-                System.out.println(action.info());
+                output.accept(action.info());
             }
         }
     }
