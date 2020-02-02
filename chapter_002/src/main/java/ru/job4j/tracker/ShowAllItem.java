@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ShowAllItem extends BaseAction {
 
@@ -17,7 +18,7 @@ public class ShowAllItem extends BaseAction {
         }
         if (result.size() > 0) {
             for (Item el : result) {
-                System.out.println("ID: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime());
+                output.accept("ID: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime());
             }
             System.out.println("------------ End of list orders --------------");
         }

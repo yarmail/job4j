@@ -9,28 +9,15 @@ public class MenuTracker {
     private Input input;
     private Tracker tracker;
     private final Consumer<String> output;
-    /**
-     * хранит ссылку на массив типа UserAction.
-     */
     private List<UserAction> actions = new ArrayList<>();
 
-    /**
-     * Конструктор 1
-     */
     public MenuTracker(Input input, Tracker tracker, Consumer<String> output) {
         this.input = input;
         this.tracker = tracker;
         this.output = output;
     }
 
-    /**
-     * Конструктор 2
-     */
-    public MenuTracker() {
-    }
-
-
-    /**
+     /**
      * Метод заполняет массив.
      */
     public void fillActions() {
