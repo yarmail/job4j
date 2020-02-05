@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class FindByName extends BaseAction {
 
@@ -9,17 +10,17 @@ public class FindByName extends BaseAction {
     }
 
     @Override
-    public void execute(Input input, Tracker tracker) {
-        System.out.println("------------ Find Order by Name --------------");
+    public void execute(Input input, Tracker tracker, Consumer<String> output) {
+        output.accept(String.format("%s%n", "------------ Find Order by Name --------------"));
         String name = input.ask("Please enter the Name of the order for find: ");
 
         List<Item> result = tracker.findByName(name);
         if (result.size() == 0) {
-            System.out.println("------------ Order not found --------------");
+            output.accept(String.format("%s%n", "------------ Order not found --------------"));
         }
         if (result.size() > 0) {
             for (Item el : result) {
-                System.out.println("Id: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime());
+                output.accept(String.format("%s%n", "Id: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime()));
             }
         }
     }

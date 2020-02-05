@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.util.function.Consumer;
+
 public class UpdateItem extends BaseAction {
 
     public UpdateItem(int key, String name) {
@@ -7,8 +9,8 @@ public class UpdateItem extends BaseAction {
     }
 
     @Override
-    public void execute(Input input, Tracker tracker) {
-        System.out.println("------------ Edit Order --------------");
+    public void execute(Input input, Tracker tracker, Consumer<String> output) {
+        output.accept(String.format("%s%n", "------------ Edit Order --------------"));
         String id = input.ask("Please enter the ID of the order for edit");
         String name = input.ask("Please enter the new name of the order");
         String desc = input.ask("Please enter the new description of the order");
@@ -16,10 +18,10 @@ public class UpdateItem extends BaseAction {
         Item item = new Item(name, desc, created);
         boolean result = tracker.replace(id, item);
         if (result) {
-            System.out.println("------------ The order with number : " + item.getId() + " has been edited");
+            output.accept(String.format("%s%n", "------------ The order with number : " + item.getId() + " has been edited"));
         }
         if (!result) {
-            System.out.println("------------ Edit operation failed --------------");
+            output.accept(String.format("%s%n", "------------ Edit operation failed --------------"));
         }
     }
 }

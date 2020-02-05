@@ -32,10 +32,10 @@ public class MenuTracker {
     /**
      * Метод в зависимости от указанного ключа, выполняет соответcтвующее действие.
      *
-     * @param key ключ операции+
+     * @param key ключ операции
      */
     public void select(int key) {
-        this.actions.get(key).execute(this.input, this.tracker);
+        this.actions.get(key).execute(this.input, this.tracker, output);
     }
 
     /**

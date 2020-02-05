@@ -10,17 +10,17 @@ public class ShowAllItem extends BaseAction {
     }
 
     @Override
-    public void execute(Input input, Tracker tracker) {
-        System.out.println("------------ List of all orders --------------");
+    public void execute(Input input, Tracker tracker, Consumer<String> output) {
+        output.accept(String.format("%s", "------------ List of all orders --------------"));
         List<Item> result = tracker.findAll();
         if (result.size() == 0) {
             System.out.println("------------ Order not found --------------");
         }
         if (result.size() > 0) {
             for (Item el : result) {
-                output.accept("ID: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime());
+                output.accept(String.format("%s", "ID: " + el.getId() + " Name: " + el.getName() + " Created: " + el.getTime()));
             }
-            System.out.println("------------ End of list orders --------------");
+            output.accept(String.format("%s", "------------ End of list orders --------------"));
         }
     }
 }
