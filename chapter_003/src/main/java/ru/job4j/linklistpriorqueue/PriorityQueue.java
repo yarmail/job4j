@@ -5,17 +5,19 @@ import java.util.ListIterator;
 
 /**
  * Очередь с приоритетом на LinkedList
- * Есть правда PriorityQueue, но делаем на LinkedList
- *
- * Для вставки элементов в середину LinkedList
- * лучше использовать Iterator
- *
+ * Интерфейс java.util.List имеет метод add(index, value).
+ * У этого метода интересное поведение.
+ * Если ячейка уже занята, то элементы сдвигаются вправо,
+ * а не заменяются, как в массиве.
  */
 public class PriorityQueue {
     private LinkedList<Task> tasks = new LinkedList<>();
 
-     /**
-     * Вводим итератор.
+    /**
+     * Метод должен вставлять в нужную позицию элемент.
+     * Позицию определять по полю приоритет.
+     * Для вставки использовать add(int index, E value)
+     * @param task задача
      */
     public void put(Task task) {
 
