@@ -1,4 +1,4 @@
-package ru.job4j.search;
+package ru.job4j.linklistpriorqueue;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -15,8 +15,7 @@ public class PriorityQueue {
     private LinkedList<Task> tasks = new LinkedList<>();
 
      /**
-     * Вводим итератор. Итератор показвает на текущий элемент или между
-     * текущим и следующим.
+     * Вводим итератор.
      */
     public void put(Task task) {
 

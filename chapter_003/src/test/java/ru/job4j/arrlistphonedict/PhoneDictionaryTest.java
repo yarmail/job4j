@@ -1,4 +1,4 @@
-package ru.job4j.search;
+package ru.job4j.arrlistphonedict;
 
 import java.util.ArrayList;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package ru.job4j.usagearraylist;
+package ru.job4j.arrlistusage;
 
 import java.util.Arrays;
 import java.util.ArrayList;

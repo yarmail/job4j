@@ -1,4 +1,4 @@
-package ru.job4j.search;
+package ru.job4j.arrlistphonedict;
 
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ public class PhoneDictionary {
             if (person.getName().contains(key)
                     ||  person.getSurname().contains(key)
                     ||  person.getPhone().contains(key)
-                    ||  person.getAdress().contains(key)) {
+                    ||  person.getAddress().contains(key)) {
                 result.add(person);
             }
         }

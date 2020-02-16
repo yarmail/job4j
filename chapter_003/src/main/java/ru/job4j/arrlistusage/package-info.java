@@ -1,4 +1,4 @@
-package ru.job4j.usagearraylist;
+package ru.job4j.arrlistusage;
 
 /**
  * 0. Коллекции, ArrayList, List, Обобщения [#10094]
