@@ -9,10 +9,10 @@ import static org.junit.Assert.assertThat;
 
 public class PhoneDictionaryTest {
     @Test
-    public void find() {
+    public void find2() {
         PhoneDictionary phones = new PhoneDictionary();
         phones.add(new Person("Petr", "Arsentev", "534872", "Bryansk"));
-        ArrayList<Person> persons = phones.find("nsk");
+        ArrayList<Person> persons = phones.find2("nsk");
         assertThat(persons.iterator().next().getSurname(), is("Arsentev"));
     }
 }

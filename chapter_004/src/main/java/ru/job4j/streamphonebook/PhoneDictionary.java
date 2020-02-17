@@ -22,13 +22,35 @@ public class PhoneDictionary {
      * @return - список найденных пользователей
      */
 
-    public ArrayList<Person> find(String key) {
+    /**
+     * 1 вариант - используем .collect(Collectors.toList())
+     * @param key
+     * @return
+     */
+    public ArrayList<Person> find1(String key) {
         ArrayList<Person> result = (ArrayList<Person>) persons.stream().filter(
                 person -> person.getAdress().contains(key)
                 || person.getName().contains(key)
                 || person.getPhone().contains(key)
                 || person.getSurname().contains(key)
         ).collect(Collectors.toList());
+        return result;
+    }
+
+    /**
+     * 2 Вариант - лучше использовать
+     * ).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+     *
+     * @param key
+     * @return
+     */
+    public ArrayList<Person> find2(String key) {
+        ArrayList<Person> result = persons.stream().filter(
+                person -> person.getAdress().contains(key)
+                        || person.getName().contains(key)
+                        || person.getPhone().contains(key)
+                        || person.getSurname().contains(key)
+        ).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
         return result;
     }
 }
