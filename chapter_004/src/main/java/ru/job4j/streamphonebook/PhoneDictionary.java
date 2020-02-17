@@ -39,7 +39,7 @@ public class PhoneDictionary {
 
     /**
      * 2 Вариант - лучше использовать
-     * ).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+     * .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
      *
      * @param key
      * @return
