@@ -1,4 +1,4 @@
-package ru.job4j.list;
+package ru.job4j.arrtolistint;
 
 import java.util.List;
 import java.util.ArrayList;
