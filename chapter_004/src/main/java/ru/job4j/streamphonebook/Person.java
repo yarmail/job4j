@@ -9,13 +9,13 @@ public class Person {
         private String name;
         private String surname;
         private String phone;
-        private String adress;
+        private String address;
 
         public Person(String name, String surname, String phone, String address) {
             this.name = name;
             this.surname = surname;
             this.phone = phone;
-            this.adress = address;
+            this.address = address;
         }
 
     public String getName() {
@@ -27,7 +27,7 @@ public class Person {
     public String getPhone() {
         return phone;
     }
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 }

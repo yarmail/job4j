@@ -29,7 +29,7 @@ public class PhoneDictionary {
      */
     public ArrayList<Person> find1(String key) {
         ArrayList<Person> result = (ArrayList<Person>) persons.stream().filter(
-                person -> person.getAdress().contains(key)
+                person -> person.getAddress().contains(key)
                 || person.getName().contains(key)
                 || person.getPhone().contains(key)
                 || person.getSurname().contains(key)
@@ -46,7 +46,7 @@ public class PhoneDictionary {
      */
     public ArrayList<Person> find2(String key) {
         ArrayList<Person> result = persons.stream().filter(
-                person -> person.getAdress().contains(key)
+                person -> person.getAddress().contains(key)
                         || person.getName().contains(key)
                         || person.getPhone().contains(key)
                         || person.getSurname().contains(key)
