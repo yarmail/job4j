@@ -23,10 +23,9 @@ public class StreamUsage {
      * что пропускать только те задачи, которые содержат слово Bug.
      */
     public List<Task> streamFilter(List<Task> tasks) {
-        List<Task> filter = tasks.stream().filter(
-                task -> task.getName().contains("Bug")
-        ).collect(Collectors.toList());
-        return filter;
+        return  tasks.stream()
+                .filter(task -> task.getName().contains("Bug"))
+                .collect(Collectors.toList());
     }
 
     /**
@@ -35,9 +34,9 @@ public class StreamUsage {
      * Для этого нужно применить метод map.
      */
     public List<String> streamMap(List<Task> tasks) {
-        List<String> names = tasks.stream().map(
-                task -> task.getName()
-        ).collect(Collectors.toList());
+        List<String> names = tasks.stream()
+                .map(task -> task.getName())
+                .collect(Collectors.toList());
         return names;
     }
 
@@ -53,9 +52,9 @@ public class StreamUsage {
      * потраченное на все задачи.
      */
     public long streamReduce(List<Task> tasks) {
-        long total = tasks.stream().map(
-                task -> task.getSpend()
-        ).reduce(0L, Long::sum);
+        long total = tasks.stream()
+                .map(task -> task.getSpend())
+                .reduce(0L, Long::sum);
         return total;
     }
 }
