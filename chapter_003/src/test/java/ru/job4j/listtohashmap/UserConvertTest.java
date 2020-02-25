@@ -1,11 +1,11 @@
-package ru.job4j.list;
+package ru.job4j.listtohashmap;
 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 public class UserConvertTest {
