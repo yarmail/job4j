@@ -17,8 +17,6 @@ import java.util.ArrayList;
  */
 
 public class ConvertMatrix2List {
-
-
     public List<Integer> toList(int[][] array) {
         return Arrays.stream(array)
                 .flatMapToInt(Arrays::stream)
