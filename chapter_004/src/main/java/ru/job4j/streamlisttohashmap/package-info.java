@@ -3,9 +3,9 @@ package ru.job4j.streamlisttohashmap;
 /**
  * 2. Написать программу преобразования List в Map.[#99122]
  * Использовать Stream.
- * Исходный вариант:
  */
 /*
+Исходный вариант:
 public class UserConvert {
 
     public HashMap<Integer, User> process(List<User> list) {
