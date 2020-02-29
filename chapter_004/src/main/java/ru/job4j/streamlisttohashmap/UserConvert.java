@@ -8,8 +8,7 @@ import java.util.stream.Collectors;
 public class UserConvert {
     public HashMap<Integer, User> process(List<User> list) {
         return (HashMap<Integer, User>) list.stream()
-        .collect(Collectors.toMap
-                (User::getId, Function.identity()));
+        .collect(Collectors.toMap(User::getId, Function.identity()));
     }
 }
 
