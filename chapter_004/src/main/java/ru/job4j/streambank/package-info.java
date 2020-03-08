@@ -9,5 +9,20 @@ package ru.job4j.streambank;
  *
  * 	2. Тестовое задание из модуля коллекции Lite
  * 	переделать на Stream API.[#99023]
- *
  */
+
+/* Старые варианты методов */
+
+/*
+    public User getUserByPassport(String passport) {
+        User result = null;
+        Set<User> users = this.map.keySet();
+        for (User i : users) {
+            if (i.getPassport().equals(passport)) {
+                result = i;
+                break;
+            }
+        }
+        return result;
+    }
+*/
