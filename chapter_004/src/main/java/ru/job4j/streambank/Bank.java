@@ -39,8 +39,13 @@ public class Bank {
     }
 
     public List<Account> getUserAccounts(String passport) {
-        return this.map.get(getUserByPassport(passport));
+        List<Account> result = Collections.emptyList();
+        if (getUserByPassport(passport) != null) {
+            result = this.map.get(getUserByPassport(passport));
+        }
+        return result;
     }
+
     public void addAccountToUser(String passport, Account account) {
         getUserAccounts(passport).add(account);
     }
@@ -51,10 +56,14 @@ public class Bank {
 
     public Account getAccount(String passport, String requisite) {
         List<Account> accountList = getUserAccounts(passport);
-        return accountList.stream()
-                .filter(i -> i.getRequisite().equals(requisite))
-                .findFirst()
-                .orElse(null);
+        Account result = null;
+        if (!accountList.isEmpty()) {
+            result = accountList.stream()
+                    .filter(i -> i.getRequisite().equals(requisite))
+                    .findFirst()
+                    .orElse(null);
+        }
+        return result;
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite,
@@ -65,10 +74,14 @@ public class Bank {
         Account srcAccount = getAccount(srcPassport, srcRequisite);
         Account destAccount = getAccount(destPassport, destRequisite);
 
-        double srcSum = srcAccount.getSum();
-        double destSum = destAccount.getSum();
+        double srcSum = -1;
+        double destSum = -1;
+        if (srcAccount != null && destAccount != null) {
+            srcSum = srcAccount.getSum();
+            destSum = destAccount.getSum();
+        }
 
-        if (srcSum >= amount) {
+        if (srcSum >= amount && srcSum != -1 && destSum != -1) {
             srcAccount.setSum(srcSum - amount);
             destAccount.setSum(destSum + amount);
             result = true;
