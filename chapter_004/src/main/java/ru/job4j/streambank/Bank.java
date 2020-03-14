@@ -40,8 +40,9 @@ public class Bank {
 
     public List<Account> getUserAccounts(String passport) {
         List<Account> result = Collections.emptyList();
-        if (getUserByPassport(passport) != null) {
-            result = this.map.get(getUserByPassport(passport));
+        User getUserByPass = getUserByPassport(passport);
+        if (getUserByPass != null) {
+            result = this.map.get(getUserByPass);
         }
         return result;
     }
