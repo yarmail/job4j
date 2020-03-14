@@ -1,16 +1,13 @@
 package ru.job4j.tracker;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
 /**
  * Class Tracker is a wrapper over an array
  * Класс Трекер - это обертка над массивом
- * items = массив для хранения заявок
- * position = после выполнение add() - показывает количество заявок
- * ----------------------------
- *     old version
- *     private final Item[] items = new Item[100];
+ * items = место для хранения заявок
  */
 
 public class Tracker {
@@ -40,9 +37,6 @@ public class Tracker {
     /**
      * Аdd method adds ids and adds new order to storage
      * Метод добавляет id и добавляет новую заявку в хранилище
-     *
-     * old version
-     * this.items[this.position++] = item;
      */
     public Item add(Item item) {
         item.setId(this.generateId());
@@ -51,15 +45,12 @@ public class Tracker {
     }
 
     /**
-     * Search in array by id
-     * Поиск ячейки в массиве по id
-     *
-     * old version
-     * for (int i = 0; i < this.position; i++) {
-     * if ((this.items[i] != null) && (this.items[i].getId()).equals(id)) {
-     * result = items[i];
-     * break;
+     * Search by id
+     * Поиск по id
      */
+
+/*
+старая версия через коллекции
     public Item findById(String id) {
         Item result = null;
         for (Item item:items) {
@@ -70,33 +61,29 @@ public class Tracker {
         }
         return result;
     }
+*/
+    public Item findById(String id) {
+        Item result = null;
+        if (!this.items.isEmpty()) {
+            result = this.items.stream()
+                    .filter(item -> item.getId().equals(id))
+                    .findFirst()
+                    .orElse(null);
+        }
+        return result;
+    }
 
-    /**
-     * Find all completed applications from the total
-     * Найти все заполненные заявки из общего объема
-     *
-     * old version
-     * Item[] result = Arrays.copyOf(this.items, this.position);
-     */
     public List<Item> findAll() {
          return this.items;
     }
 
     /**
-     * Search in array by name
-     * Поиск в массиве по полю Name
-     *
-     * old version
-     * int count = 0;
-     * Item[] tmp = new Item[this.position];
-     * for (int i = 0; i < this.position; i++) {
-     * if ((this.items[i] != null) && (this.items[i].getName().equals(key))) {
-     * tmp[count] = this.items[i];
-     * count++;
-     *  Item[] result = Arrays.copyOf(tmp, count);
+     * findByName
      */
-    public List<Item> findByName(String key) {
 
+/*
+старая версия
+    public List<Item> findByName(String key) {
         List<Item> result = new ArrayList<>(0);
         for (Item item: items) {
             if (item.getName().equals(key)) {
@@ -105,19 +92,22 @@ public class Tracker {
         }
         return result;
     }
+*/
+
+    public List<Item> findByName(String key) {
+        List<Item> result = Collections.emptyList();
+        if (!this.items.isEmpty()) {
+            result = this.items.stream()
+                    .filter(item -> item.getName().equals(key))
+                    .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+        }
+        return result;
+    }
+
 
     /**
      * Delete applications
      * Удаление заявок (находим заявку по id)
-     *
-     * old version
-     * for (int i = 0; i < this.position; i++) {
-     * if ((this.items[i] != null) && this.items[i].getId().equals(id)) {
-     * System.arraycopy(this.items, (i + 1), this.items, i, this.position - (i + 1));
-     * this.position--;
-     * this.items[this.position] = null;
-     * result = true;
-     * break;
      */
 
     public boolean delete(String id) {
@@ -136,14 +126,6 @@ public class Tracker {
      * Replace application
      * Редактирование (замена) заявки
      * Важно: при замене заявки заменить и её ID из новой
-     *
-     * old version
-     * for (int i = 0; i < this.position; i++) {
-     * if (this.items[i].getId().equals(id)) {
-     * items[i] = item;
-     * item.setId(id);
-     * result = true;
-     * break;
      */
 
     public boolean replace(String id, Item item) {
