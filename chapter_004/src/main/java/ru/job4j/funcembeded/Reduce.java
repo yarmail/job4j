@@ -16,7 +16,7 @@ public class Reduce {
      * только BinaryOperator
      */
     private static int loop(int to,
-                           BiFunction <Integer, Integer, Integer> func,
+                           BiFunction<Integer, Integer, Integer> func,
                            Supplier<Integer> initValue) {
         int rsl = initValue.get();
         for (int index = 1; index <= to; index++) {
@@ -41,7 +41,7 @@ public class Reduce {
         return loop(to, func, initValue);
     }
 
-    public static int mult (int to) {
+    public static int mult(int to) {
         BiFunction<Integer, Integer, Integer> func = new BinaryOperator<Integer>() {
             @Override
             public Integer apply(Integer left, Integer right) {
