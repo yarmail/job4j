@@ -1,4 +1,4 @@
-package ru.job4j.sort;
+package ru.job4j.sortuser;
 
 import java.util.ArrayList;
 import java.util.List;
