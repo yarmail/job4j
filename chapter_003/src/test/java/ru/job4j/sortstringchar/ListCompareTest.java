@@ -1,4 +1,4 @@
-package ru.job4j.comparator;
+package ru.job4j.sortstringchar;
 
 import org.junit.Test;
 
