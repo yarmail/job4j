@@ -1,10 +1,9 @@
-package ru.job4j.sortсomby;
+package ru.job4j.sortcomby;
 
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Collections;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.is;
@@ -32,7 +31,7 @@ public class JobSorterTest {
      *
      */
     @Test
-    public void twoDescSort(){
+    public void twoDescSort() {
         jobs.sort(new JobDescByName()
                 .thenComparing(new JobDescByPriority()));
         assertThat(jobs, is(expect));

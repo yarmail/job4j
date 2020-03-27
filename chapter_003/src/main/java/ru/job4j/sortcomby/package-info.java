@@ -1,4 +1,4 @@
-package ru.job4j.sortсomby;
+package ru.job4j.sortcomby;
 
 /**
  * 2. Комбинированный компаратор. [#10036]

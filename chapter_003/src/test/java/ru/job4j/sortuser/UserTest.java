@@ -11,10 +11,10 @@ import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.is;
 
 public class UserTest {
-    User user1 = new User ("ddd", 40);
-    User user2 = new User ("ccc", 20);
-    User user3 = new User ("ccc", 30);
-    User user4 = new User ("aaa", 10);
+    User user1 = new User("ddd", 40);
+    User user2 = new User("ccc", 20);
+    User user3 = new User("ccc", 30);
+    User user4 = new User("aaa", 10);
 
     List<User> users = Arrays.asList(user1, user2, user3, user4);
     List<User> expect = Arrays.asList(user4, user2, user3, user1);

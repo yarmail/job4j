@@ -1,4 +1,4 @@
-package ru.job4j.sortсomby;
+package ru.job4j.sortcomby;
 
 import java.util.Comparator;
 
@@ -9,9 +9,9 @@ import java.util.Comparator;
  * первый параметр со вторым.
  */
 
-public class JobDescByPriority implements Comparator<Job> {
+public class JobDescByName implements Comparator<Job> {
     @Override
     public int compare(Job o1, Job o2) {
-        return Integer.compare(o2.getPriority(), o1.getPriority());
+        return o2.getName().compareTo(o1.getName());
     }
 }
