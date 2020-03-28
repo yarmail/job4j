@@ -22,6 +22,11 @@ public class Filter {
         return result;
     }
 
+    /**
+     * Анонимный класс через lambda
+     * Predicate<Attachment> func = att -> att.getSize() > 100;
+     *
+     */
     public static List<Attachment> filterSize(List<Attachment> list) {
         Predicate<Attachment> func = new Predicate<Attachment>() {
             @Override
@@ -32,6 +37,11 @@ public class Filter {
         return filterMethod(list, func);
     }
 
+    /**
+     * Анонимный класс через lambda
+     * Predicate<Attachment> func = att -> att.getName().contains("bug");
+     *
+     */
     public static List<Attachment> filterName(List<Attachment> list) {
         Predicate<Attachment> func = new Predicate<Attachment>() {
             @Override
