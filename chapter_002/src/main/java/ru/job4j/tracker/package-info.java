@@ -1,14 +1,5 @@
 package ru.job4j.tracker;
 
-
-
-/**
- * Описание
- *
- *
- *
- */
-
 /*
 СТАРЫЕ ВЕРСИИ МЕТОДОВ класса Tracker
 
@@ -26,10 +17,22 @@ for (int i = 0; i < this.position; i++) {
     result = items[i];
     break;
 
+---- findById ---- решение через коллекции -----
+    public Item findById(String id) {
+        Item result = null;
+        for (Item item:items) {
+            if ((item != null) && (item.getId()).equals(id)) {
+                result = item;
+                break;
+            }
+        }
+        return result;
+    }
+
 ---- findAll ---- решение через массивы ----
 Item[] result = Arrays.copyOf(this.items, this.position);
 
---- findByName - решение через масивы
+--- findByName - решение через массивы
 int count = 0;
 Item[] tmp = new Item[this.position];
 for (int i = 0; i < this.position; i++) {
@@ -37,6 +40,22 @@ for (int i = 0; i < this.position; i++) {
     tmp[count] = this.items[i];
     count++;
     Item[] result = Arrays.copyOf(tmp, count);
+
+-------- findByName - решение через коллекции
+    public List<Item> findByName(String key) {
+        List<Item> result = new ArrayList<>(0);
+        for (Item item: items) {
+            if (item.getName().equals(key)) {
+                result.add(item);
+            }
+        }
+        return result;
+    }
+
+
+
+
+
 
 --- delete - удаление заявок решение через массивы -----
 for (int i = 0; i < this.position; i++) {

@@ -3,6 +3,7 @@ package ru.job4j.tracker;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 /**
  * Class Tracker is a wrapper over an array
@@ -18,7 +19,7 @@ public class Tracker {
     /**
      * Generating a unique key based on the current time and a random number
      * Генерируем уникальный ключ на основе текущего времени и случайного числа
-     * <p>
+     *
      * Если генерация ключа нужна не чаще раза в секунду можно использовать:
      * 1) currentTimeMillis() (~13 знаков)
      * 2) Math.random (~ 4 знака)
@@ -44,24 +45,22 @@ public class Tracker {
         return item;
     }
 
-    /**
-     * Search by id
-     * Поиск по id
-     */
-
-/*
-старая версия через коллекции
-    public Item findById(String id) {
-        Item result = null;
-        for (Item item:items) {
-            if ((item != null) && (item.getId()).equals(id)) {
-                result = item;
-                break;
-            }
-        }
-        return result;
+    public List<Item> findAll() {
+        return this.items;
     }
-*/
+
+    /**
+     * В методе indexOf пробуем вытащить логику обхода коллекции из
+     * нижеследующих методов
+     * filter будет менятся каждым методом, здесь общая схема
+     */
+    private List<Item> indexOf(Predicate<Item> filter) {
+        return this.items.stream()
+                .filter(filter)
+                .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+    }
+
+/* старая версия
     public Item findById(String id) {
         Item result = null;
         if (!this.items.isEmpty()) {
@@ -72,28 +71,15 @@ public class Tracker {
         }
         return result;
     }
-
-    public List<Item> findAll() {
-         return this.items;
-    }
-
-    /**
-     * findByName
-     */
-
-/*
-старая версия
-    public List<Item> findByName(String key) {
-        List<Item> result = new ArrayList<>(0);
-        for (Item item: items) {
-            if (item.getName().equals(key)) {
-                result.add(item);
-            }
-        }
-        return result;
-    }
 */
 
+    public Item findById(String id) {
+        Predicate<Item> func = item -> item.getId().equals(id);
+        return indexOf(func).get(0);
+    }
+
+
+/* старая версия
     public List<Item> findByName(String key) {
         List<Item> result = Collections.emptyList();
         if (!this.items.isEmpty()) {
@@ -103,13 +89,13 @@ public class Tracker {
         }
         return result;
     }
+*/
+    public List<Item> findByName(String key) {
+        Predicate<Item> func = item -> item.getName().equals(key);
+        return indexOf(func);
+    }
 
-
-    /**
-     * Delete applications
-     * Удаление заявок (находим заявку по id)
-     */
-
+/*
     public boolean delete(String id) {
         boolean result = false;
         for (int i = 0; i < this.items.size(); i++) {
@@ -121,13 +107,12 @@ public class Tracker {
         }
         return result;
     }
-
-    /**
-     * Replace application
-     * Редактирование (замена) заявки
-     * Важно: при замене заявки заменить и её ID из новой
-     */
-
+*/
+    public void delete(String id) {
+        Predicate<Item> func = item -> item.getId().equals(id);
+        items.remove(indexOf(func));
+    }
+/*
     public boolean replace(String id, Item item) {
         boolean result = false;
         for (int i = 0; i < this.items.size(); i++) {
@@ -139,5 +124,13 @@ public class Tracker {
             }
         }
         return result;
+    }
+*/
+    public void replace(String id, Item item) {
+        Predicate<Item> func = i -> i.getId().equals(id);
+        Item result = indexOf(func).get(0);
+        int i = items.indexOf(result);
+        items.set(i, item);
+        item.setId(id);
     }
 }
