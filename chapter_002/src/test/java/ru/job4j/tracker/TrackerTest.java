@@ -4,8 +4,8 @@ import java.util.List;
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-public class TrackerTest {
 
+public class TrackerTest {
 
     /**
      * Тестируем generateId()
@@ -149,6 +149,7 @@ public class TrackerTest {
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
+        tracker.add(item4);
         boolean result = tracker.replace(item2.getId(), item4);
         assertThat((result), is(true));
     }
