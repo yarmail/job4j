@@ -1,8 +1,8 @@
 package ru.job4j.tracker;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -72,24 +72,19 @@ public class Tracker {
 */
 
     public Item findById(String id) {
-        return items.get(indexOf(id));
-    }
-
-    /**
-     * Подскажите пожалуйста, пока не могу понять
-     * как можно использовать метод indexOf
-     * для изменения метода findByName
-     * (если это нужно)
-     */
-    public List<Item> findByName(String key) {
-        List<Item> result = Collections.emptyList();
-        if (!this.items.isEmpty()) {
-            result = this.items.stream()
-                    .filter(item -> item.getName().equals(key))
-                    .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+        Item result = null;
+        int i = indexOf(id);
+        if (i > -1) {
+            result = items.get(i);
         }
         return result;
     }
+
+    public List<Item> findByName(String key) {
+        return this.items.stream()
+                .filter(item -> item.getName().equals(key))
+                .collect(Collectors.toList());
+        }
 
 
     /*
@@ -131,7 +126,7 @@ public class Tracker {
 
     public boolean replace(String id, Item item) {
         boolean result = false;
-        int i = items.indexOf(id);
+        int i = indexOf(id);
         if (i > -1) {
             items.set(i, item);
             item.setId(id);
