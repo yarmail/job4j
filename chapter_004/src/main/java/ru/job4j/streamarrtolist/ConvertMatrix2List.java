@@ -32,7 +32,7 @@ public class ConvertMatrix2List {
     /**
      * 2 вариант
      */
-    public static List<Integer> convertToList (Integer[][] martix) {
+    public static List<Integer> convertToList(Integer[][] martix) {
         return Stream.of(martix)
                 .flatMap(Stream::of)
                 .collect(Collectors.toList());
