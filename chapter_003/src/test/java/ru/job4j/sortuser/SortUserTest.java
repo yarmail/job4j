@@ -15,6 +15,11 @@ public class SortUserTest {
      * Sort by age
      * Сортировать по возрасту
      * Класс User подготовлен к сортировке по возрасту
+     *
+     * Примечание
+     * - в Java 8 добавление элементов - add
+     * - в Java 9 для создания списка можно использовать
+     * List.of(u1, u2, u3)
      */
     @Test
     public void sortTest() {
@@ -23,19 +28,16 @@ public class SortUserTest {
         User user2 = new User("Vovan", 20);
         User user3 = new User("Kolyan", 50);
 
-        List<User> users = new ArrayList<>(3);
-        users.add(user2);
-        users.add(user1);
-        users.add(user3);
+        List<User> users = new ArrayList<>(
+                List.of(user2, user1, user3)
+        );
 
         SortUser sortUser = new SortUser();
         Set<User> result = sortUser.sort(users);
 
-        Set<User> expected = new TreeSet<>();
-        expected.add(user1);
-        expected.add(user2);
-        expected.add(user3);
-
+        Set<User> expected = new TreeSet<>(
+                Set.of(user1, user2, user3)
+        );
         assertThat(result, is(expected));
     }
     /**
@@ -49,19 +51,16 @@ public class SortUserTest {
         User user2 = new User("Ivan", 20);
         User user3 = new User("Aleksey", 30);
 
-        List<User> users = new ArrayList<>(3);
-        users.add(user2);
-        users.add(user1);
-        users.add(user3);
+        List<User> users = new ArrayList<>(
+                List.of(user2, user1, user3)
+        );
 
         SortUser sortUser = new SortUser();
         List<User> result = sortUser.sortNameLength(users);
 
-        List<User> expected = new ArrayList<>(3);
-        expected.add(user1);
-        expected.add(user2);
-        expected.add(user3);
-
+        List<User> expected = new ArrayList<>(
+                List.of(user1, user2, user3)
+        );
         assertThat(result, is(expected));
     }
 
@@ -77,21 +76,17 @@ public class SortUserTest {
         User user3 = new User("Sergey", 20);
         User user4 = new User("Sergey", 25);
 
-        List<User> users = new ArrayList<>(4);
-        users.add(user2);
-        users.add(user1);
-        users.add(user4);
-        users.add(user3);
+        List<User> users = new ArrayList<>(
+                List.of(user2, user1, user4, user3)
+        );
+
 
         SortUser sortUser = new SortUser();
         List<User> result = sortUser.sortByNameAge(users);
 
-        List<User> expected = new ArrayList<>(4);
-        expected.add(user1);
-        expected.add(user2);
-        expected.add(user3);
-        expected.add(user4);
-
+        List<User> expected = new ArrayList<>(
+                List.of(user1, user2, user3, user4)
+        );
         assertThat(result, is(expected));
     }
 }
