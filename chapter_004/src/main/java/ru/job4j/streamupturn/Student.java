@@ -1,9 +1,6 @@
 package ru.job4j.streamupturn;
 
-import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Student implements Comparable<Student> {
     private String name;
@@ -22,14 +19,6 @@ public class Student implements Comparable<Student> {
         return scope;
     }
 
-    static List<Student> levelOf(List<Student> students, int bound) {
-        return students.stream()
-                .flatMap(Stream::ofNullable)
-                .sorted()
-                .takeWhile(student -> student.getScope() > bound)
-                .collect(Collectors.toList());
-
-    }
 
     @Override
     public boolean equals(Object o) {
