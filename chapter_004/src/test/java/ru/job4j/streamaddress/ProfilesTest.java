@@ -36,22 +36,12 @@ public class ProfilesTest {
         assertThat(result, is(addressList));
     }
 
+    /**
+     * Уникальные и сортированные адреса
+     */
     @Test
     public void whenUnigueAddress() {
         List<Address> result = profile.collectUnique(addressList);
-        List<Address> expected = List.of(
-                new Address("Moscow", "Pushkina", 28, 45),
-                new Address("London", "Lenina", 5, 17),
-                new Address("Kirov", "Darvina", 46, 125),
-                new Address("Orsk", "Lavrovaya", 17, 87)
-        );
-        assertThat(result, is(expected));
-    }
-
-    @Test
-    public void whenUnigueAndSortedByCity() {
-        List<Address> result = profile.collectUnique(addressList);
-        profile.sorted(result);
         List<Address> expected = List.of(
                 new Address("Kirov", "Darvina", 46, 125),
                 new Address("London", "Lenina", 5, 17),
