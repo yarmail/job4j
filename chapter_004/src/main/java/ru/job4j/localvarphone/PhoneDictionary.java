@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * Java 10
  */
 public class PhoneDictionary {
-    // как я понимаю var c private и в полях класса не работает
+    // как я понимаю var c private в полях класса не работает
     private ArrayList<Person> persons = new ArrayList<>(0);
 
     public void add(Person person) {
@@ -25,7 +25,7 @@ public class PhoneDictionary {
      */
     public ArrayList<Person> find(String key) {
         var result = new ArrayList<Person>(0);
-        for (Person person:persons) {
+        for (var person:persons) {
             if (person.getName().contains(key)
                     ||  person.getSurname().contains(key)
                     ||  person.getPhone().contains(key)
