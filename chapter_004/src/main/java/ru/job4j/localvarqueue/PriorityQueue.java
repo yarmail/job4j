@@ -1,7 +1,7 @@
 package ru.job4j.localvarqueue;
 
 import java.util.LinkedList;
-import java.util.ListIterator;
+
 
 /**
  * Очередь с приоритетом на LinkedList
