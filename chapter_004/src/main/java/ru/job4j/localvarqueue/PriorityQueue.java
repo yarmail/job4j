@@ -9,6 +9,8 @@ import java.util.ListIterator;
  * У этого метода интересное поведение.
  * Если ячейка уже занята, то элементы сдвигаются вправо,
  * а не заменяются, как в массиве.
+ *
+ * Добавить var из Java 10
  */
 public class PriorityQueue {
     private LinkedList<Task> tasks = new LinkedList<>();
