@@ -1,6 +1,8 @@
 package job4j.tictactoe;
 
+import java.util.Arrays;
 import java.util.function.Predicate;
+import java.util.stream.IntStream;
 
 public class Logic3T {
     private final Figure3T[][] table;
@@ -24,20 +26,27 @@ public class Logic3T {
     }
 
     public boolean isWinnerX() {
-        return this.fillBy(Figure3T::hasMarkX, 0, 0, 1, 0) ||
-                this.fillBy(Figure3T::hasMarkX, 0, 0, 0, 1) ||
-                this.fillBy(Figure3T::hasMarkX, 0,0, 1, 1) ||
-                this.fillBy(Figure3T::hasMarkX, this.table.length - 1 , 0, -1, 1);
+        return isWinner(Figure3T::hasMarkX);
     }
 
     public boolean isWinnerO() {
-        return this.fillBy(Figure3T::hasMarkO, 0, 0, 1, 0) ||
-                this.fillBy(Figure3T::hasMarkO, 0, 0, 0, 1) ||
-                this.fillBy(Figure3T::hasMarkO, 0,0, 1, 1) ||
-                this.fillBy(Figure3T::hasMarkO, this.table.length - 1, 0, -1, 1);
+        return isWinner(Figure3T::hasMarkO);
+    }
+
+    private boolean isWinner(Predicate<Figure3T> predicate) {
+        boolean winner = this.fillBy(predicate, this.table.length - 1, 0, -1, 1)
+                || this.fillBy(predicate, 0, 0, 1, 1);
+        if (!winner) {
+            Predicate<Integer> horizontal = i -> this.fillBy(predicate, 0, i, 1, 0);
+            Predicate<Integer> vertical = i -> this.fillBy(predicate, i, 0, 0, 1);
+            winner = IntStream.range(0, table.length)
+                    .filter(i -> horizontal.test(i) || vertical.test(i)).count() > 0;
+        }
+        return winner;
     }
 
     public boolean hasGap() {
-        return true;
+        return !(this.table.length * this.table.length
+                == Arrays.stream(this.table).flatMap(Arrays::stream).takeWhile(s->s.hasMarkO() || s.hasMarkX()).count());
     }
 }
