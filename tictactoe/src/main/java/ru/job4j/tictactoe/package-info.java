@@ -1,4 +1,4 @@
-package job4j.tictactoe;
+package ru.job4j.tictactoe;
 
 /**
  * Класс Figure3T - отвечает за клетку на поле.

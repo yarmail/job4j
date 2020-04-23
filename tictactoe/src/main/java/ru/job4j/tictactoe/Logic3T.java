@@ -1,4 +1,4 @@
-package job4j.tictactoe;
+package ru.job4j.tictactoe;
 
 import java.util.Arrays;
 import java.util.function.Predicate;
@@ -40,13 +40,14 @@ public class Logic3T {
             Predicate<Integer> horizontal = i -> this.fillBy(predicate, 0, i, 1, 0);
             Predicate<Integer> vertical = i -> this.fillBy(predicate, i, 0, 0, 1);
             winner = IntStream.range(0, table.length)
-                    .filter(i -> horizontal.test(i) || vertical.test(i)).count() > 0;
+                    .anyMatch(i -> horizontal.test(i) || vertical.test(i));
         }
         return winner;
     }
 
     public boolean hasGap() {
-        return !(this.table.length * this.table.length
-                == Arrays.stream(this.table).flatMap(Arrays::stream).takeWhile(s->s.hasMarkO() || s.hasMarkX()).count());
+        return  Arrays.stream(this.table)
+                .flatMap(Arrays::stream)
+                .anyMatch(s -> s.hasMarkO() || s.hasMarkX());
     }
 }
