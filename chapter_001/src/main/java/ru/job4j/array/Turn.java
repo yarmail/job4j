@@ -1,7 +1,6 @@
 package ru.job4j.array;
 
 public class Turn {
-
     /**
      * Метод должен переворачивать массивы
      * The method must flip arrays.

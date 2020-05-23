@@ -189,9 +189,3 @@ three numbers
  *(Методы, возвращающие максимум их двух и 
  трех чисел)*
  
-##### package Puzzle
-* Puzzle.Logic.isWin. It is necessary to check that 
-in the array the units form a row vertically and 
-horizontally of the necessary size.  
- *(Нужно проверить что в массиве единицы образуют ряд 
- по вертикали и горизонтали нужного размера.)*

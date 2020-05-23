@@ -4,7 +4,6 @@ package ru.job4j.array;
  *  Поиск элемента в массиве
  *  Search for an element in an array
  */
-
 public class FindLoop {
 
     /**

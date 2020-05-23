@@ -1,6 +1,8 @@
 package ru.job4j.array;
 
 /**
+ * The word begins with
+ * 6.4. Слово начинается с ... [#41585] 02.04.20
  * Обертка над строкой.
  * реализация своими силами String.startsWith
  * self-realization String.startsWith
@@ -8,23 +10,13 @@ package ru.job4j.array;
 
 public class ArrayChar {
 
-    private char[] data;
-
-    public ArrayChar(String line) {
-        this.data = line.toCharArray(); //переводим строку в массив символов
-    }
-
     /**
      * Проверяет, что слово начинается с префикса.
-     * @param prefix префикс.
-     * @return если слово начинается с префикса
      */
-
-    public boolean startWith(String prefix) {
+    public static boolean startsWith(char[] word, char[] pref) {
         boolean result = true;
-        char[] value = prefix.toCharArray(); //переводим строку в массив символов
-        for (int i = 0; i < value.length; i++) {
-            if (value[i] != data[i]) {
+        for (int i = 0; i < pref.length; i++) {
+            if (pref[i] != word[i]) {
                 result = false;
                 break;
             }

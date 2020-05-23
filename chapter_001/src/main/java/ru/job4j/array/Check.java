@@ -1,7 +1,6 @@
 package ru.job4j.array;
 
 public class Check {
-
     /**
      * Метод должен проверить, что все элементы в массиве являются true или false
      * The method should check that all elements in the array are true or false.
