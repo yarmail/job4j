@@ -28,14 +28,14 @@ accounts using the collection Map <br>
 
 ##### package Comparator
 Create a Comparator for strings. Compare 2 words character 
-by character. You cannot use the String.compareTo method.
+by character. You cannot use the String.compareTo method.<br>
  *(создать компаратор для строк. Сравнить 2 слова посимвольно.
 Нельзя использовать метод String.compateTo)*
 
 ##### package DepartamentSort
 Create an organization directory in which to sort the 
 names of units in a hierarchical and lexicographical 
-order using the TreeSet collection 
+order using the TreeSet collection <br>
  *(создать справочник организации, в котором 
  отсортировать названия подразделений в иерархическом 
  и лексографическом порядке, используя 
@@ -71,7 +71,7 @@ top of the list <br>
 важные задачи стояли вначале списка)*
 
 ##### package Sort
-Sort user using Comparable and Comparator
+Sort user using Comparable and Comparator <br>
  *(сортировка пользователей с использованием
 Comparable и Comparator)* 
 
@@ -80,20 +80,9 @@ Comparable и Comparator)*
 
 ##### package CoffeeMachine 
 Known interesting task in which you need to create 
-an algorithm for issuing change with a minimum set of coins.
+an algorithm for issuing change with a minimum set of coins.<br>
  *(известная интересная зачача, в которой нужно 
 создать алгоритм выдачи сдачи минимальным набором монет)*
-
-##### package Tracker
-Console program for working with tasks.
-The program can: add task, edit task, delete task,
-get a list of all tasks, get a task by name,
-get a task by ID. <br>
- *(консольная программа по работе с заданиями.
-Программа может: добавить задание, редактировать 
-задание, удалить задание, получить список всех 
-заданий, получить задание по имени,
-получить задание по номеру)*
 
 ##### package Profession
 Create classes of professions with extends <br> 
