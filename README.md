@@ -78,6 +78,12 @@ Comparable и Comparator)*
 ---
 #### Chapter 2. OOP (Object-oriented programming)
 
+##### package ClassAndObject
+Description and work with classes, objects, 
+fields, methods, parameters.<br>
+ *(описание и работа с классами, объектами, 
+полями, методами, параметрами.)*
+
 ##### package CoffeeMachine 
 Known interesting task in which you need to create 
 an algorithm for issuing change with a minimum set of coins.<br>
