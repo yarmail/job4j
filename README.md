@@ -90,6 +90,10 @@ an algorithm for issuing change with a minimum set of coins.<br>
  *(известная интересная зачача, в которой нужно 
 создать алгоритм выдачи сдачи минимальным набором монет)*
 
+##### package Inheritance 
+Description and inheritance example <br>
+ *(описание и пример наследования)*
+
 ##### package Profession
 Create classes of professions with extends <br> 
  *(создать классы профессий с наследованием)*
