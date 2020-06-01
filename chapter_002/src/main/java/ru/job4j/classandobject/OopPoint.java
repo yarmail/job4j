@@ -22,7 +22,7 @@ public class OopPoint {
         this.y = y;
     }
 
-    public double distance (OopPoint that) {
+    public double distance(OopPoint that) {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
