@@ -91,12 +91,16 @@ an algorithm for issuing change with a minimum set of coins.<br>
 создать алгоритм выдачи сдачи минимальным набором монет)*
 
 ##### package Encapsulation
-Description of encapsulation and access modifiers
+Description of encapsulation and access modifiers.<br>
  *(описание инкапсуляции и модификаторов доступа)*
 
 ##### package Inheritance 
 Description and inheritance example <br>
  *(описание и пример наследования)*
+ 
+##### package Polymorphism
+Description of polymorphism <br>
+ *(описание полиморфизма)* 
 
 ##### package Profession
 Create classes of professions with extends <br> 
