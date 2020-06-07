@@ -3,6 +3,7 @@ package ru.job4j.listtoarray;
 import java.util.List;
 
 /**
+ * Convert List to two-dimensional array
  * Конвертация List в двухмерный массив
  */
 public class ConvertList2Array {

@@ -1,7 +1,10 @@
 package ru.job4j.sortint;
 
 /**
- * Чтобы использовать алгоритм слияния,
+ * Comparable Interface and Integer Sort
+ * Интерфейс Comparable и сортировка  Integer
+ *
+ * Чтобы использовать алгоритм сортировки,
  * сортируемый тип данных должен поддерживать
  * интерфейс java.util.Comparable.
  * Давайте откроем класс java.lang.Integer.

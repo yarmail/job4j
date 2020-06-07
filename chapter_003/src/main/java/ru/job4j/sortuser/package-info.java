@@ -1,8 +1,9 @@
 package ru.job4j.sortuser;
 
 /**
- * Организовать сортировку User [#10034]
- * ПО 2 полям
+ * Organize User sorting in two fields
+ * Организовать сортировку User ПО 2 полям
+ * [#10034]
  *
  * Теория
  * В Java есть интерфейс java.util.Set.

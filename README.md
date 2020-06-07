@@ -8,8 +8,8 @@ email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
 <br><br>
 
-## Completed work 
-*(Выполненные работы)*
+## Examples of work performed (more than 100 tasks)
+*(Примеры выполненных заданий - более 100 заданий)*
 
 ##### Used tools:
 TrackStudio, Git, IDEA, JavaFX, Maven <br>
@@ -20,60 +20,80 @@ JUnit, Hamcrest, JaCoCo, Travis CI, Codecov.io
 ---
 #### Chapter 3. Collections Framework (lite). Sorting. Compare. 
 
+##### package arrlistphonedict
+Search the telephone directory based on the ArrayList<br>
+*(Поиск в телефонном справочнике на основе коллекции ArrayList)*
+
+##### package arrlistusage
+Using the ArrayList Collection<br>
+*(Пример использования ArrayList)*
+
+##### package arrtolistint
+Converter from int[][] to List Integer
+
 ##### package Bank
 List of bank accounts. Implement a list of user 
 accounts using the collection Map <br>
- *(реализовать список счетов пользователя используя 
- коллекцию Map)*
+*(реализовать список счетов пользователя используя 
+коллекцию Map)*
 
-##### package Comparator
-Create a Comparator for strings. Compare 2 words character 
-by character. You cannot use the String.compareTo method.<br>
- *(создать компаратор для строк. Сравнить 2 слова посимвольно.
-Нельзя использовать метод String.compateTo)*
-
-##### package DepartamentSort
+##### package Departments
 Create an organization directory in which to sort the 
 names of units in a hierarchical and lexicographical 
 order using the TreeSet collection <br>
- *(создать справочник организации, в котором 
- отсортировать названия подразделений в иерархическом 
- и лексографическом порядке, используя 
- коллекцию TreeSet)*
- 
-##### package List (convert)
-* ConvertList2Array. Convert List to a 
-two-dimensional array. <br>
- *(сконвертировать List в двумерный массив)*
-* ConvertMatrix2List. Convert two-dimensional 
-array to List.   <br>
- *(сконвертировать двумерный массив в List)*
-* UserConvert. Convert user list from List to 
-HashMap  <br>
- *(сконвертировать список пользователей из 
-коллекции List в колекцию HashMap)*
+*(создать справочник организации, в котором 
+отсортировать названия подразделений в иерархическом 
+и лексографическом порядке, используя 
+коллекцию TreeSet)*
+
+##### package linklistpriorqueue
+LinkedList Priority Queue <br>
+*(очередь с приоритетом на LinkedList)*
+
+##### package listarrtolistint
+Convert List Array to List Integer <br>
+*(конвертируем лист маccивов в лист Integer)*
+
+##### package listtoarray
+Convert List to two-dimensional array <br>
+*(конвертация List в двумерный массив)*
+
+##### package listtohashmap
+Convert List to HashMap
 
 ##### package Peerview
 Check the source code (using collections) 
-and make suggestions to improve its quality.
- *(проверить исходный код (использование коллекций)
+and make suggestions to improve its quality <br>
+*(проверить исходный код (использование коллекций)
 и внести свои предложения по улучшению его качества)*
 
-##### package Search
-* PhoneDictionary. Search in a notebook for 
-a partial set of characters in any fields. <br>
- *(поиск в записной книжке по частичному 
-набору символов в любых полях)*
-* PriorityQueue. We change the task list so 
-that the most important tasks are at the 
-top of the list <br>
- *(меняем список задач так, что бы наиболее 
-важные задачи стояли вначале списка)*
+##### package sortcomby
+Sorting using a multiple field comparator <br>
+*(сортировка с использованием комбинированного 
+компаратора на несколько полей)*
 
-##### package Sort
-Sort user using Comparable and Comparator <br>
- *(сортировка пользователей с использованием
-Comparable и Comparator)* 
+##### package sortint
+Comparable Interface and Integer Sort <br>
+*(интерфейс Comparable и сортировка  Integer)*
+
+##### package sortjob
+Sorting using model properties and using a separate class <br>
+*(сортировка с использованием свойств модели 
+и с использованием отдельного класса)*
+
+##### package sortlist
+Using Collections.sort List as an example <br>
+*(использование Collections.sort на примере List)*
+
+##### package sortstringchar
+Compare 2 words. You cannot use String.compateTo.
+You can use String.charAt, Integer.compare, Character.compare <br>
+*(Сравнить 2 слова.  Нельзя использовать String.compateTo.
+Можно использовать String.charAt, Integer.compare, Character.compare)*
+
+##### package sortuser
+Organize User sorting in two fields <br>
+*(Организовать сортировку User по двум полям)*
 
 ---
 #### Chapter 2. OOP (Object-oriented programming)

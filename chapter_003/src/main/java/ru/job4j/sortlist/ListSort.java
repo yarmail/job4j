@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * Using Collections.sort List as an example
+ * Использование Collections.sort на примере List
+ *
  * В Java большинство коллекций поддерживает
  * метод Collections.sort, который позволяет
  * отсортировать коллекцию.

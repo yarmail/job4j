@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 /**
+ * LinkedList Priority Queue
  * Очередь с приоритетом на LinkedList
  * Интерфейс java.util.List имеет метод add(index, value).
  * У этого метода интересное поведение.
