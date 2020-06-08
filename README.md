@@ -90,8 +90,7 @@ stream flatMapToInt, flatMap <br>
 
 ##### package streambank
 Do the job Bank accounts using Stream API <br> 
-*(Сделать задание Банковские счета   
-с использованием Stream API)*
+*(Сделать задание Банковские счета с использованием Stream API)*
 
 ##### package streamlistarrtolistint
 List int[] to List Integer via stream
@@ -105,7 +104,7 @@ Job a telephone directory do using the Stream API <br>
 
 ##### package streamschool
 The division of students into 3 groups according 
-to the results of academic performance (Predicate, Stream API)
+to the results of academic performance (Predicate, Stream API) <br>
 *(разделение учеников на 3 группы по итогам успеваемости)*
 
 ##### package streamupturn
@@ -192,7 +191,7 @@ Organize User sorting in two fields <br>
 
 ---
 ![ScreenShot](images/oop100.jpg)
-#### Chapter 2. OOP (Object-oriented programming)
+#### Chapter 2. OOP (Object-oriented programming), Encapsulation, Inheritance, Polymorphism
 
 ##### package ClassAndObject
 Description and work with classes, objects, 
