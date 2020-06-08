@@ -18,6 +18,7 @@ JUnit, Hamcrest, JaCoCo, Travis CI, Codecov.io
 <br><br>
 
 ---
+![ScreenShot](images/stream100.jpg)
 #### Chapter 4. Lambda, Functional Interfaces, Stream API, LVTI
 
 ##### package anonymclass
@@ -111,6 +112,7 @@ to the results of academic performance (Predicate, Stream API)
 New methods in Stream API: List.of, Stream.of, Stream.iterate
 
 ---
+![ScreenShot](images/collection100.jpg)
 #### Chapter 3. Collections Framework (lite). Sorting. Compare. 
 
 ##### package arrlistphonedict
@@ -189,6 +191,7 @@ Organize User sorting in two fields <br>
 *(организовать сортировку User по двум полям)*
 
 ---
+![ScreenShot](images/oop100.jpg)
 #### Chapter 2. OOP (Object-oriented programming)
 
 ##### package ClassAndObject
