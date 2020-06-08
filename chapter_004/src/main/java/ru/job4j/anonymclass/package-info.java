@@ -1,12 +1,15 @@
 package ru.job4j.anonymclass;
 
 /**
+ * Comparator using an anonymous class (in the AttSortTest test class)
+ * Comparator с использованием анонимного класса (в тестовом классе
+ * AttSortTest)
+ *
+ * 02.2020 [#214142]
+ *
  * Анонимные классы
- *
  * модель данных - Attachment.java
- *
  * Отсортировать эту модель по полю size или name
- *
  *
  * Вариант 1
  * Создаем обычный класс AttachmentComp реализующий Comparator

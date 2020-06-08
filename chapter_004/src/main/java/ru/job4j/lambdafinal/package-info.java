@@ -1,7 +1,10 @@
 package ru.job4j.lambdafinal;
 
 /**
- * Зона видимости в лямбда
+ * Variables in lambda expressions.
+ * Visibility and effectively final
+ * Переменные в lambda выражениях.
+ * Зона видимости и effectively final
  *
 
  Чтобы избежать любых проблем в лямбда выражениями

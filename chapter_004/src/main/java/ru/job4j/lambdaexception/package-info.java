@@ -1,7 +1,8 @@
 package ru.job4j.lambdaexception;
 
 /**
- *  Lambda и исключения
+ * Lambda and exceptions
+ * Lambda и исключения
  *  Если операторы в выражении могут выкинуть исключение
  *  нужно обернуть их в блок try-catch.
  *  public static void badMethod() throws Exception {

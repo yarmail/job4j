@@ -1,6 +1,15 @@
 package ru.job4j.lambda;
 
 /**
+ * Theory and examples of sharing lambda
+ * expressions, native and built-in functional
+ * interfaces, streams, method links
+ * Теория и примеры совместного использования
+ * lambda выражений, собственных и встроенных
+ * функциональных интерфейсов, стримов,
+ * ссылок на методы.
+ *
+ *
  * ТЕОРИЯ
  *
  * Функциональный интерфейс - это интерфейс,

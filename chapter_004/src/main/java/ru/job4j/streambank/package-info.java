@@ -1,6 +1,10 @@
 package ru.job4j.streambank;
 
 /**
+ * Do the job Bank accounts using Stream API
+ * Сделать задание Банковские счета
+ * с использованием Stream API
+ *
  * List of Bank accounts
  * Список банковских счетов
  * Реализовать коллекцию Map <User, List<Account>>,

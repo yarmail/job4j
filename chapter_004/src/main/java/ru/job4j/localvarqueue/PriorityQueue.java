@@ -4,6 +4,11 @@ import java.util.LinkedList;
 
 
 /**
+ * In the task Priority Queue
+ * use Local Variable Type Inference
+ * В задании Очередь с приоритетом
+ * использовать Local Variable Type Inference
+ *
  * Очередь с приоритетом на LinkedList
  * Интерфейс java.util.List имеет метод add(index, value).
  * У этого метода интересное поведение.

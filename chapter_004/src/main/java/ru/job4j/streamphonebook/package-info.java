@@ -1,6 +1,9 @@
 package ru.job4j.streamphonebook;
 
 /**
+ * Job a telephone directory do using the Stream API
+ * Задание Телефонный справочник сделать с использованием Stream API
+ *
  * Задача:
  * Все задачи из 3 части переделать на Stream API.[#99022]
  *

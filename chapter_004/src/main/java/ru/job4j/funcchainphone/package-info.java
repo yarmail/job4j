@@ -1,5 +1,9 @@
 package ru.job4j.funcchainphone;
 /**
+ * Complete the Phone Book using Predicate and Stream API
+ * Выполнить задание Телефоннный справочник с использованием  Predicate и Stream API
+ *
+ *
  * Продолжаем работу над заданием Телефонный справочник
  * в задаче Функции высшего порядка [#24255]
  *

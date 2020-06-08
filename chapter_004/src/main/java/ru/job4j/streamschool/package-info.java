@@ -1,6 +1,11 @@
 package ru.job4j.streamschool;
 
 /**
+ * The division of students into 3 groups according
+ * to the results of academic performance
+ * (Predicate, Stream API)
+ * Разделение учеников на 3 группы по итогам успеваемости
+ *
  * 1. Фильтрация учеников. [#110058]
  *
  * В школе пришло требование разделить 9А класс на три класса.

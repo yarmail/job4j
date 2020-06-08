@@ -12,20 +12,113 @@ https://www.facebook.com/YarTsin
 *(Примеры выполненных заданий - более 100 заданий)*
 
 ##### Used tools:
-TrackStudio, Git, IDEA, JavaFX, Maven <br>
+TrackStudio, Git, IDEA, Maven <br>
 JavaDoc, СheckStyle <br> 
 JUnit, Hamcrest, JaCoCo, Travis CI, Codecov.io  
 <br><br>
 
 ---
+#### Chapter 4. Lambda, Functional Interfaces, Stream API, LVTI
+
+##### package anonymclass
+Comparator using an anonymous class (in the AttSortTest test class) <br> 
+*(Comparator с использованием анонимного класса (в тестовом классе
+AttSortTest))*
+
+##### package funcchainphone
+Complete the Phone Book using Predicate and Stream API <br>
+*(выполнить задание Телефоннный справочник 
+с использованием  Predicate и Stream API)*
+
+##### package funcembeded
+Using built-in functional interfaces <br>
+*(использование встроенных функциональных интерфейсов)*
+
+##### package function
+Implement a method for calculating a function in a range
+using functional interfaces <br>
+*(реализовать метод подсчета функции в диапазоне 
+с помощью функциональных интерфейсов)*
+
+##### package grouping
+Grouping students by interests (List, Set, Map, Stream API) <br>
+*(группировка студентов по интересам с использованием 
+List, Set, Map, Stream API)*
+
+##### package lambda
+Theory and examples of sharing lambda expressions, 
+native and built-in functional interfaces, 
+streams, method links <br>
+*(Теория и примеры совместного использования 
+lambda выражений, собственных и встроенных 
+функциональных интерфейсов, стримов, ссылок на методы)*
+
+##### package lambdaexception
+Lambda and exceptions
+
+##### package lambdafinal
+Variables in lambda expressions. Visibility and effectively final <br>
+*(переменные в lambda выражениях. Зона видимости и effectively final)*
+
+##### package localvarphone
+In the task Telephone Directory 
+use Local Variable Type Inference <br>
+*(в задании Телефонный справочник 
+использовать Local Variable Type Inference)*
+
+##### package localvarqueue
+In the task Priority Queue
+use Local Variable Type Inference <br>
+*(в задании Очередь с приоритетом
+использовать Local Variable Type Inference)*
+
+##### package streamaddress
+Make a list of unique customer addresses sorted by city using Stream <br>
+*(составить список уникальных адресов клиентов с сортировкой 
+по городу с использованием Stream)*
+
+##### package streamapi
+Description and use of the basic methods of Stream API <br>
+*(Описание и использование основных методов Stream API)*
+
+##### package streamarrtolist
+Сonverting int [][] to List <Integer> in various ways via 
+stream flatMapToInt, flatMap <br>
+*(конвертация int[][] в List<Integer> разными способами 
+через stream flatMapToInt, flatMap)*
+
+##### package streambank
+Do the job Bank accounts using Stream API <br> 
+*(Сделать задание Банковские счета   
+с использованием Stream API)*
+
+##### package streamlistarrtolistint
+List int[] to List Integer via stream
+
+##### package streamlisttohashmap
+List <User> to HashMap <Integer, User> via stream
+
+##### package streamphonebook
+Job a telephone directory do using the Stream API <br>
+*(задание Телефонный справочник сделать с использованием Stream API)*
+
+##### package streamschool
+The division of students into 3 groups according 
+to the results of academic performance (Predicate, Stream API)
+*(разделение учеников на 3 группы по итогам успеваемости)*
+
+##### package streamupturn
+New methods in Stream API: List.of, Stream.of, Stream.iterate
+
+---
 #### Chapter 3. Collections Framework (lite). Sorting. Compare. 
 
 ##### package arrlistphonedict
-Search the telephone directory based on the ArrayList<br>
+Search the telephone directory based on the ArrayList <br>
 *(Поиск в телефонном справочнике на основе коллекции ArrayList)*
 
 ##### package arrlistusage
-Using the ArrayList Collection<br>
+Using the ArrayList Collection <br>
 *(Пример использования ArrayList)*
 
 ##### package arrtolistint
@@ -88,12 +181,12 @@ Using Collections.sort List as an example <br>
 ##### package sortstringchar
 Compare 2 words. You cannot use String.compateTo.
 You can use String.charAt, Integer.compare, Character.compare <br>
-*(Сравнить 2 слова.  Нельзя использовать String.compateTo.
+*(сравнить 2 слова. Нельзя использовать String.compateTo.
 Можно использовать String.charAt, Integer.compare, Character.compare)*
 
 ##### package sortuser
 Organize User sorting in two fields <br>
-*(Организовать сортировку User по двум полям)*
+*(организовать сортировку User по двум полям)*
 
 ---
 #### Chapter 2. OOP (Object-oriented programming)
@@ -127,6 +220,7 @@ Create classes of professions with extends <br>
  *(создать классы профессий с наследованием)*
  
 ---
+![ScreenShot](images/array100.jpg)
 #### Chapter 1. Basic syntax (array, condition, loop, etc)
 
 ##### package Array

@@ -3,6 +3,11 @@ package ru.job4j.localvarphone;
 import java.util.ArrayList;
 
 /**
+ * In the task Telephone Directory
+ * use Local Variable Type Inference
+ * В задании Телефонный справочник
+ * использовать Local Variable Type Inference
+ *
  * Directory Model
  * Модель справочника
  * Поиск данных в списках.

@@ -1,6 +1,9 @@
 package ru.job4j.streamapi;
 
 /**
+ * Description and use of the basic methods of Stream API
+ * Описание и использование основных методов Stream API
+ *
  * В JDK 1.8 ввели интерфейс Stream
  * Этот интерфейс позволяет гибко работать над коллекциями.
  * Stream API работает совместно с лямбда.

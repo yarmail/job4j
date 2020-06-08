@@ -1,7 +1,12 @@
 package ru.job4j.function;
 
 /**
- * 1 Реализовать метод подсчета функции в диапазоне.
+ * Implement a method for calculating a function
+ * in a range using functional interfaces
+ * Реализовать метод подсчета функции в диапазоне
+ * с помощью функциональных интерфейсов
+ *
+ *
  * List<Double> diapason(int start, int end, Function<Double, Double> func);
  * 2 Реализации функций в тестах.
  * - линейная.
