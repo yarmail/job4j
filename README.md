@@ -8,8 +8,13 @@ email: yarmail@yandex.ru<br>
 https://www.facebook.com/YarTsin
 <br><br>
 
-## Examples of work performed (more than 100 tasks)
-*(Примеры выполненных заданий - более 100 заданий)*
+#### Project description
+* Chapter 4. Lambda, Functional Interfaces, Stream API, LVTI
+* Chapter 3. Collections Framework (lite). Sorting. Compare.
+* Chapter 2. OOP (Object-oriented programming), Encapsulation, Inheritance, Polymorphism
+* Chapter 1. Basic syntax (array, condition, loop, etc)
+In total, more than 100 tasks.<br>
+(Всего более 100 заданий)
 
 ##### Used tools:
 TrackStudio, Git, IDEA, Maven <br>
