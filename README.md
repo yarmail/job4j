@@ -12,9 +12,8 @@ https://www.facebook.com/YarTsin
 * Chapter 4. Lambda, Functional Interfaces, Stream API, LVTI
 * Chapter 3. Collections Framework (lite). Sorting. Compare.
 * Chapter 2. OOP (Object-oriented programming), Encapsulation, Inheritance, Polymorphism
-* Chapter 1. Basic syntax (array, condition, loop, etc)
-In total, more than 100 tasks.<br>
-(Всего более 100 заданий)
+* Chapter 1. Basic syntax (array, condition, loop, etc) <br>
+In total, more than 100 tasks (всего более 100 заданий)
 
 ##### Used tools:
 TrackStudio, Git, IDEA, Maven <br>
