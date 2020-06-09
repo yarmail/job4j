@@ -1,12 +1,7 @@
 [![Build Status](https://travis-ci.org/yarmail/job4j.svg?branch=master)](https://travis-ci.org/yarmail/job4j)
 [![codecov](https://codecov.io/gh/yarmail/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/yarmail/job4j)
 
-Yaroslav Tsinovskiy (Yar Tsin)<br> 
-position: Java Developer<br> 
-location: Moscow, Russia<br>
-email: yarmail@yandex.ru<br>
-https://www.facebook.com/YarTsin
-<br><br>
+### Project Job4j Basic
 
 #### Project description
 * Chapter 4. Lambda, Functional Interfaces, Stream API, LVTI
