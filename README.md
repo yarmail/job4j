@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/yarmail/job4j.svg?branch=master)](https://travis-ci.org/yarmail/job4j)
 [![codecov](https://codecov.io/gh/yarmail/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/yarmail/job4j)
 
-### Project Java Trainee
+### Java Trainee Tasks
 
-#### Project description
+#### Module description
 * Chapter 4. Lambda, Functional Interfaces, Stream API, LVTI
 * Chapter 3. Collections Framework (lite). Sorting. Compare.
 * Chapter 2. OOP (Object-oriented programming), Encapsulation, Inheritance, Polymorphism
