@@ -72,6 +72,9 @@ use Local Variable Type Inference <br>
 *(в задании Очередь с приоритетом
 использовать Local Variable Type Inference)*
 
+##### package predicateexample
+*(Примеры работы с предикатами)*
+
 ##### package streamaddress
 Make a list of unique customer addresses sorted by city using Stream <br>
 *(составить список уникальных адресов клиентов с сортировкой 
