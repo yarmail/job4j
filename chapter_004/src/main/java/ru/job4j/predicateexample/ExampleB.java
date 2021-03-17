@@ -14,7 +14,7 @@ public class ExampleB {
      * 
      */
     public static void printFilter(List<Integer> nums, Predicate<Integer> condition) {
-        for(Integer num : nums) {
+        for (Integer num : nums) {
             if (condition.test(num)) {
                 System.out.println(num);
             }
