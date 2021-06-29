@@ -3,6 +3,7 @@ package ru.job4j.converter;
 /**
  * пример конвертера валюты
  * Example currency converter
+ * (тесты есть)
  */
 
 public class Converter {
