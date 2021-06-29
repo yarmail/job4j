@@ -10,7 +10,7 @@ package ru.job4j.typeconversion;
  */
 public class Task {
     /**
-     * Ответ: -127 без потери
+     * Ответ: -127 с потерей
      */
     public static void one() {
         long l = 129;
