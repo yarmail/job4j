@@ -7,7 +7,7 @@ import static ru.job4j.math.MathFunction.*;
  * Для того чтобы выполнить статический импорт надо вместе
  * с директивой import используется модификатор static.
  */
-public class MathCalculatorС {
+public class MathCalculatorC {
 
     public static double sumAndMultiply(double first, double second) {
         return sum(first, second) + multiply(first, second);
