@@ -1,31 +1,33 @@
 package ru.job4j.condition;
 
 /**
- * Description of a point in the coordinate system
- * Описание точки в системе координат
- * private int x,y внутренние поля класса
+ * Distance between points in a plane coordinate system
+ * Расстояние между точками в плоской системе координат
+ * Выглядит примерно так = кв. корень (x2-x1)*2 + (y2-y1)*2
  */
+public class Point {
+    public static double distance(int x2, int x1, int y2, int y1) {
+        double first = Math.pow(x2-x1, 2);
+        double second = Math.pow(y2-y1, 2);
+        double result = Math.sqrt(first + second);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Point.distance(5, 6, 7, 8));
+    }
+}
+
+/* Старое решение чарез два объекта с использованием this и that
+
 public class Point {
     private int x;
     private int y;
-
-    /**
-     * public Point - конструктор класса
-     * Удобно, при обращению к классу IDEA сразу просит указать необходимые параметры
-     * this.x = x; // теперь к внутреннему полю x можно обращаться через This
-     */
 
     public Point(int x, int y) {
     this.x = x;
     this.y = y;
     }
-
-    /**
-     * @param that переменая That типа Point передается входным параметром в метод Distance
-     * Point a = this;
-     * Point b = that; переменные A и B - это экземпляры Point ??
-     * @return result расчитываем по формуле расстояния между точками
-     */
 
     public double distanceTo(Point that) {
         Point a = this;
@@ -36,11 +38,6 @@ public class Point {
         return result;
     }
 
-    /**
-     * из-за большого количества предварительных преобразований
-     * конечный метод очень лаконичный
-     * @param args
-     */
     public static void main(String[] args) {
         Point a = new Point(0, 1);
         Point b = new Point(2, 5);
@@ -52,3 +49,5 @@ public class Point {
         System.out.println("Расстояние между точками А и B : " + result);
     }
 }
+
+*/
