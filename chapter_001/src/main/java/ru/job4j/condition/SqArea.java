@@ -12,6 +12,7 @@ package ru.job4j.condition;
  * h = p / (2 * (k + 1));
  * L = h * k;
  * s = L * h;
+ * (тесты сделаны)
  */
 public class SqArea {
     public static double square(int p, double k) {
