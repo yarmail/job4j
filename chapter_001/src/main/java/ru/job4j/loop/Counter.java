@@ -1,23 +1,26 @@
 package ru.job4j.loop;
 
+/**
+ * 5.0.1. Сумма чисел. [#226416]
+ * В этом задании нужно написать программу,
+ * которая будет подсчитывать сумму чисел от start до finish.
+ * Например, start = 0, finish = 5.
+ * Нужно сложить числа: 0, 1, 2, 3, 4, 5. Ответ будет 15.
+ */
 public class Counter {
-    int sum = 0;
 
-    /**
-     *  метод add должен вычислять сумму четных чисел в диапазоне от start до finish
-     *  Add method must calculate the sum of even numbers in the range from start to finish
-     *
-     * @param start
-     * @param finish
-     * @return
-     */
-
-    public int add(int start, int finish) {
+    public static int sum(int start, int finish) {
+        int sum = 0;
         for (int i = start; i <= finish; i++) {
-            if (i % 2 == 0) {
-                sum = sum + i;
+            sum = sum + i;
             }
-        }
         return sum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sum(0, 5)); // 15
+        System.out.println(sum(0, 10));
+        System.out.println(sum(3, 8));
+        System.out.println(sum(1, 1));
     }
 }
