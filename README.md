@@ -4,10 +4,11 @@
 ### Java Trainee level tasks
 
 #### Module description
-* Chapter 4. Lambda, Functional Interfaces, Stream API, LVTI
-* Chapter 3. Collections Framework (lite). Sorting. Compare.
+* Chapter 1. Basic syntax (array, condition, loop, etc) 
 * Chapter 2. OOP (Object-oriented programming), Encapsulation, Inheritance, Polymorphism
-* Chapter 1. Basic syntax (array, condition, loop, etc) <br>
+* Chapter 3. Collections Framework (lite). Sorting. Compare.
+* Chapter 4. Lambda, Functional Interfaces, Stream API, LVTI
+<br>
 In total, more than 200 tasks (всего более 200 заданий)
 
 ##### Used tools:
