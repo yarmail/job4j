@@ -1,6 +1,5 @@
 package ru.job4j.condition;
 
-
 /**
  * 4.6.2. Switch - matcher [#334071]
  * Начиная с JDK 12, мы можем писать так:
@@ -14,7 +13,6 @@ package ru.job4j.condition;
  * это необходимое требование при использовании ->
  *
  */
-
 public class MultipleSwitchWeek {
 
     /**
@@ -25,13 +23,13 @@ public class MultipleSwitchWeek {
      * так и на русском. Ваша задача - вернуть
      * номер дня недели
      */
-/*
+    /*
     public static int numberOfDay(String name) {
     return switch (name) {
         case "Понедельник", "Monday" -> 1;
+        case "Вторник", "Tuesday" -> 2;
         default -> -1;
         };
     }
-
     */
 }

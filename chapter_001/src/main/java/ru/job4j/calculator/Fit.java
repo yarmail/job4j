@@ -7,12 +7,14 @@ package ru.job4j.calculator;
  */
 
 public class Fit {
+
     /**
      * manWeight - идеальный вес для мужчины
      */
-    public static double manWeight(short height) {
+        public static double manWeight(short height) {
         return (height - 100) * 1.15;
     }
+
     /**
      * womanWeight - идеальный вес для женщины
      */
@@ -25,5 +27,4 @@ public class Fit {
         double man = Fit.manWeight(height);
         System.out.println("Man 180 is " + man);
     }
-
 }

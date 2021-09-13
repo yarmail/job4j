@@ -6,6 +6,7 @@ public class Merge  {
     int[] left;
     int[] right;
     boolean more;
+
     /**
      *  constructor method
      */
@@ -13,6 +14,7 @@ public class Merge  {
         this.left = left;
         this.right = right;
     }
+
     /**
      * result method
      * 1) if possible do add array (tested)
@@ -31,6 +33,7 @@ public class Merge  {
         }
         return result;
     }
+
     /**
      *  test method
      *  which array is bigger
@@ -43,6 +46,7 @@ public class Merge  {
             more = false;
         }
     }
+
     /**
      * test method
      * is it possible to add arrays
@@ -55,6 +59,7 @@ public class Merge  {
         }
         return result;
     }
+
     /**
      * test method
      * comparing array and variable
@@ -70,6 +75,7 @@ public class Merge  {
         }
         return result;
     }
+
     /**
      * performer method
      * add arrays if left[i] < right [0]
@@ -85,6 +91,7 @@ public class Merge  {
         }
         return add;
     }
+
     /**
      * performer method
      * merge arrays if first <= second
@@ -107,6 +114,7 @@ public class Merge  {
         }
     return merge;
     }
+
     /**
      * test performer method
      * min of first, second
@@ -115,6 +123,7 @@ public class Merge  {
         int result = first <= second ? first : second;
         return result;
     }
+
     /**
      * test performer method
      * max of first, second
