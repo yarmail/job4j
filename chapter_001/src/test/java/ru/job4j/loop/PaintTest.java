@@ -5,7 +5,6 @@ import java.util.StringJoiner;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
-
 public class PaintTest {
     /*
     тест для правостороннего треугольника

@@ -1,6 +1,5 @@
 package ru.job4j.condition;
 
-
 /**
  * 4.3.4. if c return [#333785]
  * Ниже приведен код. Метод eq проверяет,

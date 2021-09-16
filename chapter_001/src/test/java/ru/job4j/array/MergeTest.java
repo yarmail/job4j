@@ -4,7 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-
 public class MergeTest {
 
     /**
@@ -19,6 +18,7 @@ public class MergeTest {
         int[] check = {1, 2, 3, 4, 5};
         assertThat(result, is(check));
     }
+
     /**
      * test method merge first <= second
      */
@@ -31,6 +31,7 @@ public class MergeTest {
         int[] check = {1, 2, 4, 6};
         assertThat(result, is(check));
     }
+
     /**
      * test method cycle
      */

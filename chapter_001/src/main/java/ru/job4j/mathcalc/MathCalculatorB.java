@@ -2,7 +2,6 @@ package ru.job4j.mathcalc;
 
 import ru.job4j.math.MathFunction;
 
-
 /**
  * Второй вариант
  * Директива import указывается в самом начале кода,

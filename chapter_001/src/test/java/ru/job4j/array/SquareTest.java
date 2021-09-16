@@ -12,6 +12,7 @@ public class SquareTest {
         int[] rst = square.calculate(bound);
         int[] expect = new int[]{1, 4, 9};
     }
+
     @Test
     public void whenBound4Then14916() {
         int bound = 4;
