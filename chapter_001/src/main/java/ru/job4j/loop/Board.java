@@ -15,7 +15,6 @@ public class Board {
      * Ставим X, когда сумма индексов четное число
      * screen.append(ln) - добавляем перевод на новую строку
      */
-
     public String paint(int height, int width) {
         StringBuilder screen = new StringBuilder();
         String ln = System.lineSeparator();
