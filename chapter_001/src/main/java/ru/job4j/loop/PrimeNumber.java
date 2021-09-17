@@ -12,7 +12,7 @@ public class PrimeNumber {
         int count = 0;
         for (int number = 1; number <= finish; number++) {
             if (CheckPrimeNumber.check(number)) {
-                count+= 1;
+                count += 1;
             }
         }
         return count;
