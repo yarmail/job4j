@@ -8,7 +8,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.is;
 
-
 /**
  * Совмещаем две сортировки по убыванию
  * JobDescByName

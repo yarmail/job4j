@@ -18,6 +18,7 @@ public class Bank2Test {
         User user = bank.getUserByPassport("12345");
         assertThat(user, is(user1));
     }
+
     @Test
     public void deleteUser() {
         Bank2 bank = new Bank2();
@@ -27,6 +28,7 @@ public class Bank2Test {
         boolean result = bank.existUser(user1);
         assertThat(result, is(false));
     }
+
     @Test
     public void getUserByPassport() {
         Bank2 bank = new Bank2();
@@ -34,6 +36,7 @@ public class Bank2Test {
         User user = bank.getUserByPassport("12345");
         assertThat(user, is(user1));
     }
+
     @Test
     public void getUserAccounts() {
         Bank2 bank = new Bank2();
@@ -43,6 +46,7 @@ public class Bank2Test {
         int result = bank.getUserAccounts("12345").size();
         assertThat(result, is(2));
     }
+
     @Test
     public void addAccountToUser() {
         Bank2 bank = new Bank2();
@@ -52,6 +56,7 @@ public class Bank2Test {
         int result = bank.getUserAccounts("12345").size();
         assertThat(result, is(2));
     }
+
     @Test
     public void deleteAccountFromUser() {
         Bank2 bank = new Bank2();
@@ -62,6 +67,7 @@ public class Bank2Test {
         int result = bank.getUserAccounts("12345").size();
         assertThat(result, is(1));
     }
+
     @Test
     public void getIndexAccount() {
         Bank2 bank = new Bank2();
@@ -71,6 +77,7 @@ public class Bank2Test {
         int result = bank.getIndexAccount("12345", "N001");
         assertThat(result, is(0));
     }
+
     @Test
     public void getAccountMoney() {
         Bank2 bank = new Bank2();
@@ -79,6 +86,7 @@ public class Bank2Test {
         double result = bank.getAccountMoney("12345", "N001");
         assertThat(result, is(100.0));
     }
+
     @Test
     public void setAccountMoney() {
         Bank2 bank = new Bank2();
@@ -88,6 +96,7 @@ public class Bank2Test {
         double result = bank.getAccountMoney("12345", "N001");
         assertThat(result, is(200.0));
     }
+
     @Test
     public void transferMoney() {
         Bank2 bank = new Bank2();

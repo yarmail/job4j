@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
-
 /**
  * Решение задачи с использованием встроенных
  * функциональных интерфейсов

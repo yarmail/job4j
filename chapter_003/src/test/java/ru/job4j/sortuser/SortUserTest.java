@@ -40,6 +40,7 @@ public class SortUserTest {
         );
         assertThat(result, is(expected));
     }
+
     /**
      * Sort by name length
      * Сортировка по длине имени
@@ -79,7 +80,6 @@ public class SortUserTest {
         List<User> users = new ArrayList<>(
                 List.of(user2, user1, user4, user3)
         );
-
 
         SortUser sortUser = new SortUser();
         List<User> result = sortUser.sortByNameAge(users);

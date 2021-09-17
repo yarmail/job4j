@@ -22,9 +22,11 @@ public class Bank2 {
         public void addUser(User user) {
         this.map.putIfAbsent(user, new ArrayList<Account>());
     }
+
     public void deleteUser(User user) {
         this.map.remove(user);
     }
+
     public User getUserByPassport(String passport) {
         User result = null;
         Set<User> users = this.map.keySet();
@@ -36,9 +38,11 @@ public class Bank2 {
         }
         return result;
     }
+
     public List<Account> getUserAccounts(String passport) {
         return this.map.get(getUserByPassport(passport));
     }
+
     public void addAccountToUser(String passport, Account account) {
         getUserAccounts(passport).add(account);
     }
@@ -46,6 +50,7 @@ public class Bank2 {
     public void deleteAccountFromUser(String passport, Account account) {
         getUserAccounts(passport).remove(account);
     }
+
     public int getIndexAccount(String passport, String requisite) {
         List<Account> accountList = getUserAccounts(passport);
         int result = -1;
@@ -57,17 +62,20 @@ public class Bank2 {
         }
         return result;
     }
+
     public double getAccountMoney(String passport, String requisite) {
         List<Account> accountList = getUserAccounts(passport);
         int indexAccount = getIndexAccount(passport, requisite);
         return accountList.get(indexAccount).getSum();
     }
+
     public void setAccountMoney(String passport, String requisite, double amount) {
         double sum = getAccountMoney(passport, requisite);
         List<Account> accountList = getUserAccounts(passport);
         int indexAccount = getIndexAccount(passport, requisite);
         accountList.get(indexAccount).setSum(sum + amount);
     }
+
     public boolean transferMoney(String srcPassport, String srcRequisite,
                               String destPassport, String destRequisite,
                               double amount) {

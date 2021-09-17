@@ -13,6 +13,7 @@ public class PhoneDictionary {
     public void add(Person person) {
         this.persons.add(person);
     }
+
     /**
      * Вернуть список всех пользователей,
      * которые содержат key в любых полях
@@ -31,6 +32,4 @@ public class PhoneDictionary {
         }
         return result;
     }
-
-
 }

@@ -7,7 +7,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.core.Is.is;
 
-
 public class FunctionRangeTest {
     /**
      * Вычисление линейной функции в диапазоне

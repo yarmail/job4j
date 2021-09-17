@@ -4,7 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.is;
 
-
 public class BankTest {
 
     /**
@@ -17,6 +16,7 @@ public class BankTest {
         boolean result = bank.existUser(user1);
         assertThat(result, is(false));
     }
+
     /**
      * При добавлении пользователя
      * addUser = true, existUser = true
@@ -30,6 +30,7 @@ public class BankTest {
         boolean result = addUser && existUser;
         assertThat(result, is(true));
     }
+
     /**
      * После добавления пользователя
      * existUser = true
@@ -46,6 +47,7 @@ public class BankTest {
         boolean result = existUser && deleteUser;
         assertThat(result, is(true));
     }
+
     /**
      * Exist Account
      * В листе счетов у пользователя нет отсутствующего счета
@@ -59,6 +61,7 @@ public class BankTest {
         boolean result = bank.existAccount(user1, account1);
         assertThat(result, is(false));
     }
+
     /**
      * Add Account
      * После добавления банковского счета:
@@ -76,6 +79,7 @@ public class BankTest {
         boolean result = addAccount && existAccount;
         assertThat(result, is(true));
     }
+
     /**
      * Delete Account
      * После добавления банковского счета
@@ -95,6 +99,7 @@ public class BankTest {
         boolean result = existAccount && deleteAccount;
         assertThat(result, is(true));
     }
+
     /**
      * Add Money
      * Было 100, добавили 100 стало 200
@@ -110,6 +115,7 @@ public class BankTest {
         double result = account1.getSum();
         assertThat(result, is(200.0));
     }
+
     /**
      * Delete Money
      * Было 100, отняли 50, стало 50
@@ -125,6 +131,7 @@ public class BankTest {
         double result = account1.getSum();
         assertThat(result, is(50.0));
     }
+
     /**
      * Transfer money
      * Перевод средств

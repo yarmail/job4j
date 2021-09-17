@@ -25,6 +25,7 @@ public class Bank {
         }
         return result;
     }
+
     /**
      * Add User
      * Добавляем нового пользователя, если его ещё нет
@@ -39,6 +40,7 @@ public class Bank {
         }
         return result;
     }
+
     /**
      * Delete User
      * Удаляем пользователя, если он есть в списке
@@ -51,6 +53,7 @@ public class Bank {
         }
         return result;
     }
+
     /**
      * Exist Account (without checks)
      * Существует ли у такого пользователя такой счет?
@@ -63,6 +66,7 @@ public class Bank {
             }
         return result;
     }
+
     /**
      * Add Account
      * Добавить банковский счет, если его нет
@@ -76,6 +80,7 @@ public class Bank {
         }
         return result;
     }
+
     /**
      * Delete Account
      * Удалить банковский счет, если он есть
@@ -89,6 +94,7 @@ public class Bank {
         }
         return result;
     }
+
     /**
      * Exist Money (without checks)
      * Есть ли деньги на счете
@@ -103,6 +109,7 @@ public class Bank {
         }
         return  result;
     }
+
     /**
      * Add money (without checks)
      * Добавить деньги на счет
@@ -113,6 +120,7 @@ public class Bank {
         double sum = list.get(indexAccount).getSum();
         list.get(indexAccount).setSum(sum + money);
     }
+
     /**
      * Delete money (without checks)
      * Удалить деньги со счета
@@ -123,6 +131,7 @@ public class Bank {
         double sum = list.get(indexAccount).getSum();
         list.get(indexAccount).setSum(sum - money);
     }
+
     /**
      * Transfer money (with checks)
      * Перевод средств

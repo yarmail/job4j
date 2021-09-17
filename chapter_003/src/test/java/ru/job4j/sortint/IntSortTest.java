@@ -1,10 +1,8 @@
 package ru.job4j.sortint;
 
-
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.is;
-
 
 public class IntSortTest {
     int expect = -1;

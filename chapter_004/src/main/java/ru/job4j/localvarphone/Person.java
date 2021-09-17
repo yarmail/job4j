@@ -21,12 +21,15 @@ public class Person {
     public String getName() {
         return name;
     }
+
     public String getSurname() {
         return surname;
     }
+
     public String getPhone() {
         return phone;
     }
+
     public String getAddress() {
         return address;
     }

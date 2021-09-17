@@ -2,7 +2,6 @@ package ru.job4j.localvarqueue;
 
 import java.util.LinkedList;
 
-
 /**
  * In the task Priority Queue
  * use Local Variable Type Inference

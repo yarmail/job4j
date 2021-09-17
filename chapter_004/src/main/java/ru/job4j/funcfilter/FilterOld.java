@@ -3,7 +3,6 @@ package ru.job4j.funcfilter;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Фильтрации списка без применения
  * встроенных функциональных интерфейсов

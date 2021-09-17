@@ -19,7 +19,6 @@ public class Student implements Comparable<Student> {
         return scope;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {

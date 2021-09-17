@@ -42,6 +42,7 @@ public class DepartmentsSortTest {
             "K1\\SK1\\SSK2",
             "K1\\SK1\\SSK1"
     };
+
     /**
      * Сортировка в лексикографическом порядке
      */
@@ -51,6 +52,7 @@ public class DepartmentsSortTest {
         Set<String> result = testSort.abc(source);
         assertThat(result, is(new LinkedHashSet<>(asList(expectAbc))));
     }
+
     /**
      * Сортировка в обратном лексикографическом порядке
      */

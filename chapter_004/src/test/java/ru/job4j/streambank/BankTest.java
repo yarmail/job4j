@@ -18,6 +18,7 @@ public class BankTest {
         User user = bank.getUserByPassport("12345");
         assertThat(user, is(user1));
     }
+
     @Test
     public void deleteUser() {
         Bank bank = new Bank();
@@ -27,6 +28,7 @@ public class BankTest {
         boolean result = bank.existUser(user1);
         assertThat(result, is(false));
     }
+
     @Test
     public void getUserByPassport() {
         Bank bank = new Bank();
@@ -34,6 +36,7 @@ public class BankTest {
         User user = bank.getUserByPassport("12345");
         assertThat(user, is(user1));
     }
+
     @Test
     public void getUserAccounts() {
         Bank bank = new Bank();
@@ -43,6 +46,7 @@ public class BankTest {
         int result = bank.getUserAccounts("12345").size();
         assertThat(result, is(2));
     }
+
     @Test
     public void addAccountToUser() {
         Bank bank = new Bank();
@@ -52,6 +56,7 @@ public class BankTest {
         int result = bank.getUserAccounts("12345").size();
         assertThat(result, is(2));
     }
+
     @Test
     public void deleteAccountFromUser() {
         Bank bank = new Bank();
@@ -62,6 +67,7 @@ public class BankTest {
         int result = bank.getUserAccounts("12345").size();
         assertThat(result, is(1));
     }
+
     @Test
     public void transferMoney() {
         Bank bank = new Bank();

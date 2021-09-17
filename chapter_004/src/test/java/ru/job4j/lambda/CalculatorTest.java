@@ -7,7 +7,6 @@ import java.util.List;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-
 /**
  * В первоначальной версии нашего метода,
  * мы не могли написать тест, из-за того, что данные выводятся в консоль.

@@ -4,7 +4,6 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.Comparator;
 
-
 public class DepartmentsSort {
 
     /**
@@ -22,6 +21,7 @@ public class DepartmentsSort {
         }
         return result;
     }
+
     /**
      * Сортировка в обратном лексикографическом порядке
      */
@@ -29,9 +29,5 @@ public class DepartmentsSort {
         Set<String> result = new TreeSet<>(Comparator.reverseOrder());
         result.addAll(abc(departments));
         return result;
-
-
-
     }
-
 }

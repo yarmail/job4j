@@ -14,7 +14,6 @@ public class PriorityQueueTest {
     private Task task3 = new Task("middle", 3);
     PriorityQueue queue = new PriorityQueue();
 
-
     @Test
     public void put() {
         queue.put(task1);

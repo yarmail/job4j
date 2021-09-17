@@ -65,6 +65,4 @@ public class AttSortTest {
         Attachment expect = att3;
         assertThat(expect, is(result));
     }
-
-
 }

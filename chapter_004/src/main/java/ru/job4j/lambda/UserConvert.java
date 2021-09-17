@@ -17,11 +17,9 @@ import java.util.function.Function;
  * Давайте рассмотрим пример. У нас есть список имен,
  * и мы их хотим преобразовать в пользователей.
  */
-
 public class UserConvert {
     public static class User {
         private final String name;
-
 
         public User(String name) {
             this.name = name;
@@ -51,6 +49,7 @@ public class UserConvert {
         );
         return users;
     }
+
     /**
      * main переименовано в main1
      * Вызов

@@ -1,10 +1,8 @@
 package ru.job4j.funcembeded;
 
-
 /**
  * Решение задачи без функционального интерфейса.
  */
-
 public class ReduceOld {
 
     public static int summ(int to) {

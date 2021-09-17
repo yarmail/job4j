@@ -7,13 +7,11 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-
 /**
  * В данном тесте сравниваем два решения:
  * expect - это решение без встроенн. функ. интерфейсов
  * result - со встроенными интерфейсами
  */
-
 public class FilterTest {
 
     Attachment att1 = new Attachment("bug", 13);

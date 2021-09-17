@@ -17,8 +17,6 @@ import java.util.ArrayList;
  *
  * result массив монет для сдачи, который получит пользователь
  */
-
-
 public class CoffeeMachine {
 
     private final int[] coin = {10, 5, 2, 1};
