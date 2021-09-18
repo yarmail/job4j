@@ -13,5 +13,17 @@ public class ArrayLoop {
             arr[i] = i * 2 + 3;
             System.out.println(arr[i]);
         }
+        forEach(arr);
+    }
+
+    /**
+     * 6.0.3.1. Массивы и цикл for-each [#333581]
+     * Второй цикл, который выводит все значения из массива в консоль
+     * - перепишите на цикл for-each.
+     */
+    public static void forEach(int[] arr) {
+        for (int el: arr) {
+            System.out.println(el);
+        }
     }
 }
