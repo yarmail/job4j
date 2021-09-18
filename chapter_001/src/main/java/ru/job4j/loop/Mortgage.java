@@ -13,11 +13,10 @@ public class Mortgage {
      * @return Метод должен вычислять количество лет, необходимых для погашения кредита.
      */
     public static int year(double amount, int salary, double percent) {
-        int year = 1;
-        double sumWithPercent = amount + amount * percent / 100;
-        while (salary < sumWithPercent) {
+        int year = 0;
+        while (amount > 0) {
             year += 1;
-            sumWithPercent -= salary * percent / 100;
+            amount +=  amount * percent /100 - salary;
         }
         return  year;
     }
