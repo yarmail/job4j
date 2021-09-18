@@ -15,7 +15,7 @@ public class CheckPrimeNumber {
      * boolean primeNumber = number != 1;
      */
     public static boolean check(int number) {
-        boolean primeNumber = number != 1;
+        boolean primeNumber = number > 1;
         for (int index = 2; index < number; index++) {
             if (number % index == 0) { //если остаток от деления равен 0
                 primeNumber = false;
