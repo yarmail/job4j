@@ -11,6 +11,23 @@ package ru.job4j.array;
  * Ваша задача устранить эту ошибку.
  */
 public class SwitchArray {
+    /**
+     * 6.2.2. Переставить элементы массива [#226795]
+     * Вашей задачей является реализовать метод таким образом, чтобы значение ячеек с индексами source
+     * и dest поменялись местами. При этом:
+     * - source указывает на индекс элемента,
+     * который будет записан в ячейку с индексом dest;
+     *  - dest указывает на индекс элемента,
+     *  который будет записан в ячейку с индексом source;
+     *  (тесты есть)
+     */
+    public static int[] swap(int[] array, int source, int dest) {
+        int temp  = array[source];
+        array[source] = array[dest];
+        array[dest] = temp;
+        return array;
+    }
+
     public static int[] swapBorder(int[] array) {
         int temp = array[0];
         array[0] = array[array.length - 1]; // было [array.length];
