@@ -1,5 +1,8 @@
 package ru.job4j.array;
 
+/**
+ * 6.2.3. Перевернуть массив. [#226790]
+ */
 public class Turn {
     /**
      * Метод должен переворачивать массивы
@@ -9,7 +12,7 @@ public class Turn {
      * количество операций можно уменьшить в 2 раза без остатка
      * tmp - временная переменная для обмена местами
      */
-    public int[] back(int[] array) {
+    public static int[] back(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
             int tmp = array[i];
             array[i] = array[array.length - 1 - i];
