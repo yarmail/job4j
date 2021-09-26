@@ -18,21 +18,20 @@ package ru.job4j.classandobject;
  * и через точку написать имя метода.
  *
  * Вызываем метод music(), используя переменную
- * petya объекта класса Student.
+ * petya объекта.
  *
  */
-/*
-public class Student {
+public class ObjectMethodCall {
 
     public void music() {
         System.out.println("Tra tra tra");
     }
 
     public static void main(String[] args) {
-        Student petya = new Student();
+        ObjectMethodCall petya = new ObjectMethodCall();
         petya.music();
     }
 }
-*/
+
 
 
