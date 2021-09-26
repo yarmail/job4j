@@ -3,6 +3,9 @@ package ru.job4j.array;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * Тесты
+ */
 public class DefragmentTest {
     @Test
     public void singleFirstNull() {

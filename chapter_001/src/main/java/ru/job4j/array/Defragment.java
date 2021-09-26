@@ -22,6 +22,7 @@ package ru.job4j.array;
  * а часть - нет. Заполненные ячейки могут быть разбросаны
  * по всему массиву. Нам бы хотелось расположить
  * все эти ячейки в начале массива.
+ * (тесты есть)
  */
 public class Defragment {
     public static String[] compress(String[] array) {
