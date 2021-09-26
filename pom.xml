@@ -1,3 +1,10 @@
+<!--
+В 2021 году этот проект  перешёл на
+IDEA 2021
+JDK 16
+checkstyle 2020 v. 3.1.2
+-->
+
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.job4j</groupId>
