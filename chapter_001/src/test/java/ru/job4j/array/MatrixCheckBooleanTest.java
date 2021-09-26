@@ -4,10 +4,10 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class MatrixCheckTest {
+public class MatrixCheckBooleanTest {
     @Test
     public void whenDataMonoByTrueThenTrue() {
-        MatrixCheck check = new MatrixCheck();
+        MatrixCheckBoolean check = new MatrixCheckBoolean();
         boolean[][] input = new boolean[][] {
                 {true, true, true},
                 {false, true, true},
@@ -19,7 +19,7 @@ public class MatrixCheckTest {
 
     @Test
     public void whenDataNotMonoByTrueThenFalse() {
-        MatrixCheck check = new MatrixCheck();
+        MatrixCheckBoolean check = new MatrixCheckBoolean();
         boolean[][] input = new boolean[][] {
                 {true, true, false},
                 {false, false, true},

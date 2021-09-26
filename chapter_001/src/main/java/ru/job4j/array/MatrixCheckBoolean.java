@@ -1,6 +1,6 @@
 package ru.job4j.array;
 
-public class MatrixCheck {
+public class MatrixCheckBoolean {
 
     /**
      * Проверка диагоналей матрицы x*x
