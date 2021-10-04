@@ -11,7 +11,7 @@ public class ExampleB {
      * б) распечатывать 
      * При этом условия фильтра мы не знаем (и)или задаем их в самом
      * конце, в тесте, остальное взаимодействие описываем здесь
-     * 
+     * (тесты есть)
      */
     public static void printFilter(List<Integer> nums, Predicate<Integer> condition) {
         for (Integer num : nums) {

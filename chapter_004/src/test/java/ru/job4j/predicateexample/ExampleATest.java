@@ -1,7 +1,6 @@
 package ru.job4j.predicateexample;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 public class ExampleATest {
