@@ -3,7 +3,7 @@ package ru.job4j.oop.point;
 /**
  * 2.1. Рефакторинг - Расстояние между точками. [#122587 #218314]
  * (в ООП стиле)
- *
+ * (тесты есть)
  */
 public class Point {
     private int x;
