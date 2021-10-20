@@ -11,7 +11,7 @@ package ru.job4j.sortint;
  * Мы видим, что этот класс реализует интерфейс
  * java.util.Comparable.
  *
- * Интерфейс Complarable имеет всего один метод compareTo(T t).
+ * Интерфейс Comparable имеет всего один метод compareTo(T t).
  * Этот метод возвращает меньше нуля, ноль, больше нуля.
  * Меньше нуля - если входящее значение больше,
  * чем текущий объект.
@@ -26,6 +26,10 @@ public class IntSort {
     public static int intCompare() {
         Integer first = 1;
         Integer second = 2;
-        return first.compareTo(second); //-1
+        return first.compareTo(second);
     }
 }
+/*
+return
+- 1
+ */

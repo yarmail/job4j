@@ -14,9 +14,11 @@ import java.util.ArrayList;
  *
  * Использовать Local Variable Type Inference из
  * Java 10
+ *
+ * Примечания
+ * как я понимаю var c private в полях класса не работает
  */
 public class PhoneDictionary {
-    // как я понимаю var c private в полях класса не работает
     private ArrayList<Person> persons = new ArrayList<>(0);
 
     public void add(Person person) {

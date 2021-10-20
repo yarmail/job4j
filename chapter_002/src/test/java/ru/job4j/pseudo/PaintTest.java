@@ -15,7 +15,7 @@ import static org.junit.Assert.assertThat;
  * Мы можем заменить класс для вывода в консоль и заменить ее выводом в память.
  *
  * PrintStream stdout = System.out;
- * //получаем ссылку на стандартный вывод в консоль.
+ * получаем ссылку на стандартный вывод в консоль.
  *
  * Для загрузки нового объекта для управлении выводом нам нужно
  * использовать метод System.setOut
@@ -31,13 +31,13 @@ import static org.junit.Assert.assertThat;
  * Создаем буфур для хранения вывода.
  *
  * System.setOut(new PrintStream(out));
- * //Заменяем стандартный вывод на вывод в пямять для тестирования.
+ * Заменяем стандартный вывод на вывод в пямять для тестирования.
  *
  * new Paint().draw(new Square());
- * //выполняем действия пишушиее в консоль.
+ * выполняем действия пишушиее в консоль.
  *
  * System.setOut(stdout);
- * //возвращаем обратно стандартный вывод в консоль.
+ * возвращаем обратно стандартный вывод в консоль.
  */
 public class PaintTest {
     /**
@@ -58,7 +58,6 @@ public class PaintTest {
     public void loadOutput() {
         System.out.println("execute before method");
         System.setOut(new PrintStream(this.out));
-
     }
 
     @After

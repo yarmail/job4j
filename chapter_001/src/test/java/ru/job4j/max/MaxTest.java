@@ -6,7 +6,9 @@ import static org.junit.Assert.assertThat;
 
 public class MaxTest {
 
-    // проверка больший из двух
+    /**
+     * проверка больший из двух
+     */
     @Test
     public void whenFirstLessSecond() {
         Max maxim = new Max();
@@ -14,12 +16,13 @@ public class MaxTest {
         assertThat(result, is(2));
     }
 
-    // проверка больший из трех
+    /**
+     * проверка больший из трех
+     */
     @Test
     public void whenTreeMoreTwoAndOne() {
         Max mxm = new Max();
         int result = mxm.max(1, 2, 3);
         assertThat(result, is(3));
     }
-
 }

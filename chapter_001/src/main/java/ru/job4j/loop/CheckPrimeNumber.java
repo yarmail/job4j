@@ -13,11 +13,14 @@ public class CheckPrimeNumber {
      * if (number = 1) -> primeNumber = false
      * Стало:
      * boolean primeNumber = number != 1;
+     *
+     * if (number % index == 0) { -> если остаток от деления равен 0
+     *
      */
     public static boolean check(int number) {
         boolean primeNumber = number > 1;
         for (int index = 2; index < number; index++) {
-            if (number % index == 0) { //если остаток от деления равен 0
+            if (number % index == 0) {
                 primeNumber = false;
                 break;
             }

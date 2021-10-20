@@ -26,10 +26,13 @@ public class OopPoint {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
+    /**
+     * Вывод - 2
+     */
     public static void main(String[] args) {
         OopPoint a = new OopPoint(0, 0);
         OopPoint b = new OopPoint(0, 2);
         double dist = a.distance(b);
-        System.out.println(dist); //the output is 2.0
+        System.out.println(dist);
     }
 }

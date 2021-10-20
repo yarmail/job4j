@@ -12,13 +12,13 @@ public class Paint {
      * Правый треугольник
      * Right triangle
      * @param height
-     * StringBuilder screen = new StringBuilder(); //Буфер для результата.
-     * int width = height; // ширина будет равна высоте.
-     * for (int row... // внешний цикл двигается по строкам.
-     * for (int column = 0... // внутренний цикл определяет положение ячейки в строке.
-     * if (row >= column) // в данном случае
+     * StringBuilder screen = new StringBuilder(); ---Буфер для результата.
+     * int width = height; --- ширина будет равна высоте.
+     * for (int row... --- внешний цикл двигается по строкам.
+     * for (int column = 0... --- внутренний цикл определяет положение ячейки в строке.
+     * if (row >= column) ---- в данном случае
      * количество строк определяет, сколько галок будет в строке
-     * screen.append(System.lineSeparator()); // добавляем перевод строки.
+     * screen.append(System.lineSeparator()); --- добавляем перевод строки.
      * @return
      */
 

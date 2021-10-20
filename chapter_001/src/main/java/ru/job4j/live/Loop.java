@@ -10,12 +10,13 @@ package ru.job4j.live;
 public class Loop {
 
     /**
+     * Часто используемые сокращения
      * psvm - public static void main(String[] args)
+     * fori - for (int i = 0; i < 10; i++
+     * // sout - System.out.println();
      */
     public static void main(String[] args) {
-        // fori - for (int i = 0; i < 10; i++
         for (int i = 0; i < 10; i++) {
-            // sout - System.out.println();
             System.out.println("1");
         }
     }

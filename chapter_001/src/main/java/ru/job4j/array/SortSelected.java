@@ -29,12 +29,19 @@ package ru.job4j.array;
  * минимальный элемент стоит в нужной ячейке.
  * Дальше повторяем операцию.
  * Находим 4 и меняем местами с 5.
+ * Пояснения
+ *
+ * находим минимум в текущем диапазоне
+ * int min = MinDiapason.findMin(data, i, data.length - 1);
+ *
+ * находим индекс этого числа
+ * int index = FindLoop.indexOf(data, min, i, data.length - 1);
+ *
  * (тесты есть)
  */
 public class SortSelected {
     public static int[] sort(int[] data) {
         for (int i = 0; i < data.length; i++) {
-            // находим минимум в текущем диапазоне
             int min = MinDiapason.findMin(data, i, data.length - 1);
             // находим индекс этого числа
             int index = FindLoop.indexOf(data, min, i, data.length - 1);

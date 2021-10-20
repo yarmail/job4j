@@ -7,8 +7,13 @@ package ru.job4j.classandobject;
  * Он принимает один аргумент с типом String.
  * Метод, объявленный с аргументом,
  * может быть выполнен, только если в него передадут аргумент
+ *
  * Вызов метода с указанием двух аргументов не сработает
+ * MethodArg.hello(name, age) - ошибка
+ *
  * Вызав методва с указанием другого типа аргумента не сработает
+ * MethodArg.hello(age (int)) - ошибка
+ *
  */
 public class MethodArg {
 
@@ -19,7 +24,5 @@ public class MethodArg {
     public static void main(String[] args) {
         String name = "Petr Arsentev";
         MethodArg.hello(name);
-        // MethodArg.hello(name, age) - ошибка
-        // MethodArg.hello(age (int)) - ошибка
     }
 }

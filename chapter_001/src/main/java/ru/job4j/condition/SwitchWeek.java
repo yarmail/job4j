@@ -35,10 +35,13 @@ public class SwitchWeek {
         /**
          * переменнная name будет менятся
          * в зависимости от работы switch case
+         * switch (day) { - day - проверяемое значение на входе
+         * case 1:    - что будет если day = 1
+         * default:   - любое другое значение вместо выше перечисленных
          */
         String name;
-        switch (day) { //day - проверяемое значение на входе
-            case 1:    //что будет если day = 1
+        switch (day) {
+            case 1:
                 name = "Понедельник";
                 break;
             case 2:
@@ -59,7 +62,7 @@ public class SwitchWeek {
             case 7:
                 name = "Воскресение";
                 break;
-            default:   // любое другое значение вместо выше перечисленных
+            default:
                 name = "Ошибка";
                 break;
         }

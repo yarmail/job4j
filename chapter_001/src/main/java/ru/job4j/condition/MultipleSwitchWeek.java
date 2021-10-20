@@ -41,10 +41,11 @@ public class MultipleSwitchWeek {
 
     /**
      * Проверка
+     * System.out.println(numberOfDay("Monday")); =1
+     * System.out.println(numberOfDay("Пятница")); =5
      */
     public static void main(String[] args) {
-        System.out.println(numberOfDay("Monday")); //1
-        System.out.println(numberOfDay("Пятница")); //5
+        System.out.println(numberOfDay("Monday"));
+        System.out.println(numberOfDay("Пятница"));
     }
-
 }

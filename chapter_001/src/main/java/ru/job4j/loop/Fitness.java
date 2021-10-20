@@ -31,14 +31,16 @@ public class Fitness {
      * то Ивану нужен один месяц, чтобы обогнать Николая.
      * 90 * 3 = 270 - Иван через месяц.
      * 100 * 2 = 200 - Николай через месяц.
-     *
+     * month += 1; ---- month = month + 1
+     * ivan *= 3; ---- ivan = ivan * 3
+     * nik *= 2; ----- nik = nik * 2
      */
     public static int calc(int ivan, int nik) {
         int month = 0;
         while (ivan <= nik) {
-            month += 1; //month = month + 1
-            ivan *= 3; //ivan = ivan * 3
-            nik *= 2; //nik = nik * 2
+            month += 1;
+            ivan *= 3;
+            nik *= 2;
         }
         return month;
     }
