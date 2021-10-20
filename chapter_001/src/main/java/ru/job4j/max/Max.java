@@ -1,7 +1,9 @@
 package ru.job4j.max;
 
+/**
+ * 3. Перегрузить метод max для трех чисел [#122644]
+ */
 public class Max {
-   private int maximum;
    /**
     * Методы, возвращающие максимум их двух и трех чисел.
     * Methods returning a maximum of two and three numbers.
@@ -14,14 +16,20 @@ public class Max {
     * @param first  первое значение
     * @param second второе значение
     * @return наибольшее значение.
+    *
+    * Задание:
+    * добавить перегруженный метод max для трех и четырех чисел
+    * (тесты есть)
     */
-
    public int max(int first, int second) {
-      maximum = first > second ? first : second;
-      return maximum;
+      return first > second ? first : second;
    }
 
    public int max(int first, int second, int third) {
       return max(max(first, second), third);
+   }
+
+   public int max(int first, int second, int third, int fourth) {
+      return max(max(first, second), max(third, fourth));
    }
 }

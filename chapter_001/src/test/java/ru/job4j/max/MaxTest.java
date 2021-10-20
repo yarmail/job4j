@@ -6,23 +6,24 @@ import static org.junit.Assert.assertThat;
 
 public class MaxTest {
 
-    /**
-     * проверка больший из двух
-     */
     @Test
     public void whenFirstLessSecond() {
-        Max maxim = new Max();
-        int result = maxim.max(1, 2);
+        Max max = new Max();
+        int result = max.max(1, 2);
         assertThat(result, is(2));
     }
 
-    /**
-     * проверка больший из трех
-     */
     @Test
     public void whenTreeMoreTwoAndOne() {
-        Max mxm = new Max();
-        int result = mxm.max(1, 2, 3);
+        Max max = new Max();
+        int result = max.max(1, 2, 3);
         assertThat(result, is(3));
+    }
+
+    @Test
+    public void when4() {
+        Max max = new Max();
+        int result = max.max(1, 2, 3, 4);
+        assertThat(result, is(4));
     }
 }
