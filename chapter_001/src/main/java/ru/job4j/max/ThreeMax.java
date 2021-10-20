@@ -1,4 +1,4 @@
-package ru.job4j.condition;
+package ru.job4j.max;
 
 /**
  * 4.5. Отладка программы в IDEA [#159464]

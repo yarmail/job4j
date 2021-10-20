@@ -1,4 +1,4 @@
-package ru.job4j.condition;
+package ru.job4j.max;
 
 import org.junit.Assert;
 import org.junit.Test;
