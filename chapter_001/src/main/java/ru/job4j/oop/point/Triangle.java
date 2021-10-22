@@ -8,9 +8,9 @@ public class Triangle {
     private final double a, b, c;
 
     public Triangle(Point first, Point second, Point third) {
-        a = first.distanceTo(second);
-        b = second.distanceTo(third);
-        c = third.distanceTo(first);
+        a = first.distance2D(second);
+        b = second.distance2D(third);
+        c = third.distance2D(first);
     }
 
     /**
