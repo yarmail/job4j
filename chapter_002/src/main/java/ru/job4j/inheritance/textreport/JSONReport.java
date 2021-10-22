@@ -8,6 +8,7 @@ package ru.job4j.inheritance.textreport;
  * Этот метод должен вернуть шаблон в следующем формате.
  */
 public class JSONReport extends TextReport {
+    @Override
     public String generate(String name, String body) {
         return "{" + System.lineSeparator()
                 + name + ": \"name\"," + System.lineSeparator()

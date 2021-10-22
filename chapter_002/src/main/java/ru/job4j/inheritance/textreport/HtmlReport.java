@@ -7,7 +7,7 @@ package ru.job4j.inheritance.textreport;
  * Для этого мы создаем наследника от TextReport
  */
 public class HtmlReport extends TextReport {
-
+    @Override
     public String generate(String name, String body) {
         return "<h1>" + name + "</h1>"
                 + "<br/>"
