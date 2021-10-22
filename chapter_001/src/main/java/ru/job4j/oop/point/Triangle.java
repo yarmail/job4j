@@ -5,9 +5,7 @@ package ru.job4j.oop.point;
  * (тесты есть)
  */
 public class Triangle {
-    private final double a;
-    private final double b;
-    private final double c;
+    private final double a, b, c;
 
     public Triangle(Point first, Point second, Point third) {
         a = first.distanceTo(second);
@@ -22,7 +20,7 @@ public class Triangle {
      * для всех возможных сочетаний.
      */
     boolean exist() {
-        return a < (b + c) || b < (a + c) || c < (a + b);
+        return a < (b + c) && b < (a + c) && c < (a + b);
     }
 
     /**
