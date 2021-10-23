@@ -7,7 +7,9 @@ package ru.job4j.oop.point;
  *
  */
 public class Point {
-    private int x, y, z;
+    private int x;
+    private int y;
+    private int z;
 
     public Point(int x, int y) {
         this.x = x;
