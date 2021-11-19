@@ -20,7 +20,7 @@ public class Library {
         for (Book book: books) {
             System.out.println(book.getName() + " " + book.getCount());
         }
-        System.out.println("-------------------------------------------");
+        System.out.println("------------------------------------------");
 
         for (int i = 0; i < books.length; i++) {
             if (books[i].getName().equals("Clean code")) {
