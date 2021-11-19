@@ -1,4 +1,4 @@
-package ru.job4j.pojo_library;
+package ru.job4j.pojolibrary;
 /*
 Задание
 1. Создайте модель данных "Книга" с полями:
