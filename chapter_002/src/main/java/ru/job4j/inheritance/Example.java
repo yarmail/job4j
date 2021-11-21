@@ -1,6 +1,6 @@
 package ru.job4j.inheritance;
 
-/**
+/*
  * Inheritance - Theory and Example
  *
  * Теория
@@ -11,7 +11,7 @@ package ru.job4j.inheritance;
  * и методам родительского класса.
  */
 
-/**
+/*
  * Пример
  * Класс имеет один метод.
  * Теперь давайте сделаем класс ToyCat на о
