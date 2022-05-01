@@ -1,6 +1,3 @@
-[![Build Status](https://app.travis-ci.com/yarmail/job4j.svg?branch=master)](https://app.travis-ci.com/yarmail/job4j)
-[![codecov](https://codecov.io/gh/yarmail/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/yarmail/job4j)
-
 ### Java Trainee level tasks
 
 #### Module description
