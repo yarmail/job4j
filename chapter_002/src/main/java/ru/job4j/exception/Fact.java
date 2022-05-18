@@ -8,6 +8,8 @@ package ru.job4j.exception;
  * 2. Добавьте проверку входного параметра в метод calc.
  * Если n < 0, то нужно прервать программу с
  * исключением IllegalArgumentException("N could not be less then 0").
+ *
+ * (есть тесты)
  */
 public class Fact {
     public int calc(int n) {

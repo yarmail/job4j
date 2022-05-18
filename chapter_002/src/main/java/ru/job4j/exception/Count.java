@@ -45,6 +45,8 @@ package ru.job4j.exception;
  * у переменной, которая инициализирована null ссылкой.
  *
  * (задание в классе Fact)
+ *
+ * (сделаны тесты)
  */
 public class Count {
     public static int add(int start, int finish) {
