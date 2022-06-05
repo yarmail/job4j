@@ -11,7 +11,7 @@ public class PassportOffice {
 
     public boolean add(Citizen citizen) {
         boolean result = false;
-        if ( !check(citizen.getPassport()) ) {
+        if (!check(citizen.getPassport())) {
             citizens.put(citizen.getPassport(), citizen);
             result = true;
         }
