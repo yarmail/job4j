@@ -19,11 +19,7 @@ public class PassportOffice {
     }
 
     public Citizen get(String passport) {
-        Citizen citizen = null;
-        if (check(passport)) {
-            citizen = citizens.get(passport);
-        }
-        return citizen;
+        return citizens.get(passport);
     }
 
     /**
