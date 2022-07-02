@@ -1,5 +1,8 @@
 package ru.job4j.sortuser;
 
+/**
+ * есть тесты
+ */
 public class User implements Comparable<User> {
     private String name;
     private Integer age;
