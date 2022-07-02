@@ -3,6 +3,7 @@ package ru.job4j.sortjob;
 /**
  * Модель с перечнем выполняемых работ
  * и приоритетом их выполнения
+ * (есть тесты)
  */
 public class Job implements Comparable<Job> {
     private String name;
