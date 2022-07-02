@@ -65,7 +65,7 @@ package ru.job4j.lambda;
  * Разработчики JDK встроили готовые функциональные
  * интерфейсы описывающие всевозможные варианты.
  * Они находятся в пакете java.util.function
- * https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+ * https:(две косые черты)docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
  *
  * Их можно разделить на 4 группы.
  * Consumer - принимает параметры, метод ничего не возвращает void.
