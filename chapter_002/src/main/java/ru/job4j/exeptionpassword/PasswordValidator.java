@@ -19,9 +19,8 @@ import java.util.Locale;
  */
 public class PasswordValidator {
     private static String password;
-    public static String message;
     private static char[] chars;
-    private static final String[] STOP_WORDS = {"qwerty", "12345", "12345", "admin", "user"};
+    private static final String[] INVALID_WORDS = {"qwerty", "12345", "12345", "admin", "user"};
 
     public static String validate(String string) {
         password = string;
@@ -30,75 +29,79 @@ public class PasswordValidator {
         }
         checkNull();
         checkLength();
-        checkUpper();
-        chekLower();
+        checkUpperCaseChar();
+        chekLowerCaseChar();
         checkDigit();
         checkSpecSymbol();
-        checkStopWord();
-        message = "Password is valid";
-        return message;
+        checkInvalidWord();
+        return "Password is valid";
     }
 
     private static void checkNull() {
         if (null == password) {
-            message = "Password is null";
-            makeException(message);
+            makeException("Password is null");
         }
     }
 
     private static void checkLength() {
         if (password.length() < 8 || password.length() > 32) {
-            message = "Длина пароля должна находится в диапазоне [8, 32]";
-            makeException(message);
+            makeException("Длина пароля должна находится в диапазоне [8, 32]");
         }
     }
 
-    private static void checkUpper() {
-        for (char symbol:chars) {
+    private static void checkUpperCaseChar() {
+        boolean found = false;
+        for (char symbol : chars) {
             if (Character.isUpperCase(symbol)) {
-                return;
+                found = true;
             }
         }
-        message = "Пароль должен содержать хотя бы один символ в верхнем регистре";
-        makeException(message);
+        if (!found) {
+            makeException("Пароль должен содержать хотя бы один символ в верхнем регистре");
+        }
     }
 
-    private static void chekLower() {
-        for (char symbol:chars) {
+    private static void chekLowerCaseChar() {
+        boolean found = false;
+        for (char symbol : chars) {
             if (Character.isLowerCase(symbol)) {
-                return;
+                found = true;
             }
         }
-        message = "Пароль должен содержать хотя бы один символ в нижнем регистре";
-        makeException(message);
+        if (!found) {
+            makeException("Пароль должен содержать хотя бы один символ в нижнем регистре");
+        }
     }
 
     private static void checkDigit() {
-        for (char symbol:chars) {
+        boolean found = false;
+        for (char symbol : chars) {
             if (Character.isDigit(symbol)) {
-                return;
+                found = true;
             }
         }
-        message = "Пароль должен содержать хотя бы одну цифру";
-        makeException(message);
+        if (!found) {
+            makeException("Пароль должен содержать хотя бы одну цифру");
+        }
     }
 
     private static void checkSpecSymbol() {
-        for (char symbol:chars) {
+        boolean found = false;
+        for (char symbol : chars) {
             if (!Character.isLetterOrDigit(symbol)) {
-                return;
+                found = true;
             }
         }
-        message = "Пароль должен содержать хотя бы один спец. символ (не цифра и не буква)";
-        makeException(message);
+        if (!found) {
+            makeException("Пароль должен содержать хотя бы один спец. символ (не цифра и не буква)");
+        }
     }
 
-    private static void checkStopWord() {
+    private static void checkInvalidWord() {
         String pass = password.toLowerCase(Locale.ROOT);
-        for (String word: STOP_WORDS) {
+        for (String word : INVALID_WORDS) {
             if (pass.contains(word)) {
-                message = "Пароль не должен содержать стоп-слова";
-                makeException(message);
+                makeException("Пароль не должен содержать некоторые слова");
                 return;
             }
         }
