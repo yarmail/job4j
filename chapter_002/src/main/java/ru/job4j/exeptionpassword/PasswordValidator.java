@@ -54,6 +54,7 @@ public class PasswordValidator {
         for (char symbol : chars) {
             if (Character.isUpperCase(symbol)) {
                 found = true;
+                break;
             }
         }
         if (!found) {
@@ -66,6 +67,7 @@ public class PasswordValidator {
         for (char symbol : chars) {
             if (Character.isLowerCase(symbol)) {
                 found = true;
+                break;
             }
         }
         if (!found) {
@@ -78,6 +80,7 @@ public class PasswordValidator {
         for (char symbol : chars) {
             if (Character.isDigit(symbol)) {
                 found = true;
+                break;
             }
         }
         if (!found) {
@@ -90,6 +93,7 @@ public class PasswordValidator {
         for (char symbol : chars) {
             if (!Character.isLetterOrDigit(symbol)) {
                 found = true;
+                break;
             }
         }
         if (!found) {
@@ -102,7 +106,7 @@ public class PasswordValidator {
         for (String word : INVALID_WORDS) {
             if (pass.contains(word)) {
                 makeException("Пароль не должен содержать некоторые слова");
-                return;
+                break;
             }
         }
     }
