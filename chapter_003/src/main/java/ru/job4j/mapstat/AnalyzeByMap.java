@@ -3,6 +3,7 @@ package ru.job4j.mapstat;
 import java.util.*;
 
 /**
+ * 4. Аттестация [#504878]
  * (есть тесты)
  */
 public class AnalyzeByMap {
@@ -20,10 +21,7 @@ public class AnalyzeByMap {
                 count++;
             }
         }
-        if (count == 0) {
-            return 0;
-        }
-        return score / count;
+        return count == 0 ? 0 : score / count;
     }
 
     /**
@@ -53,48 +51,23 @@ public class AnalyzeByMap {
      * Вычисляет средний балл по каждому предмету.
      * Например, собираем все баллы учеников по
      * предмету география и делим на количество учеников.
-     * @param pupils
      * @return Возвращает список из объектов Label
      * (название предмета и средний балл).
      */
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
-        List<String> listSubject = new ArrayList<>();
+        Map<String, Integer> maps = new LinkedHashMap<>();
+        List<Label> labels = new ArrayList<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                String nameSubject = subject.name();
-                listSubject.add(nameSubject);
+                maps.merge(subject.name(), subject.score(), (oldVal, newVal) -> oldVal + newVal);
             }
         }
-        Collections.sort(listSubject);
-
-        Map<String, Integer> mapSubjects = new HashMap<>();
-        int count = 1;
-        for (int i = 0; i < listSubject.size() - 1; i++) {
-            if (listSubject.get(i + 1).equals(listSubject.get(i))) {
-                count++;
-            } else {
-                mapSubjects.put(listSubject.get(i), count);
-                count = 1;
-            }
+        for (String subject : maps.keySet()) {
+            double score = maps.get(subject);
+            Label label = new Label(subject, score / pupils.size());
+            labels.add(label);
         }
-        mapSubjects.put(listSubject.get(listSubject.size() - 1), count);
-
-        List<Label> result = new ArrayList<>();
-        for (Map.Entry<String, Integer> pair : mapSubjects.entrySet()) {
-            String key = pair.getKey();
-            Integer value = pair.getValue();
-            double score = 0;
-            for (Pupil pupil : pupils) {
-                for (Subject subject : pupil.subjects()) {
-                    if (key.equals(subject.name())) {
-                        score += subject.score();
-                    }
-                }
-            }
-            Label label = new Label(key, score / value);
-            result.add(label);
-        }
-        return result;
+        return labels;
     }
 
     /**
@@ -123,27 +96,19 @@ public class AnalyzeByMap {
      * сумма баллов каждого ученика по этому предмету).
      */
     public static Label bestSubject(List<Pupil> pupils) {
-        Map<String, Integer> map = new LinkedHashMap<>();
-        List<Label> listSubjects = new ArrayList<>();
+        Map<String, Integer> maps = new LinkedHashMap<>();
+        List<Label> labels = new ArrayList<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                String key = subject.name();
-                int score = subject.score();
-                if (map.containsKey(key)) {
-                    score += map.get(key);
-                }
-                map.put(key, score);
+                maps.merge(subject.name(), subject.score(), (oldVal, newVal) -> oldVal + newVal);
             }
         }
-
-        for (Map.Entry<String, Integer> pair : map.entrySet()) {
-            String key = pair.getKey();
-            Integer value = pair.getValue();
-            Label label = new Label(key, value);
-            listSubjects.add(label);
+        for (String subject : maps.keySet()) {
+            double score = maps.get(subject);
+            Label label = new Label(subject, score);
+            labels.add(label);
         }
-
-        listSubjects.sort(Comparator.naturalOrder());
-        return listSubjects.get(listSubjects.size() - 1);
+        labels.sort(Comparator.naturalOrder());
+        return labels.get(labels.size() - 1);
     }
 }
