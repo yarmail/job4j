@@ -2,6 +2,7 @@ package ru.job4j.streamlisttomap;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -22,6 +23,10 @@ import java.util.stream.Collectors;
  * В случае добавления дубликата необходимо
  * оставить старое значение.
  *
+ * Выражение e -> e,
+ * можно заменить на Function.identity()
+ * т.е эдентичное выражение
+ *
  * (есть тесты)
  */
 
@@ -29,9 +34,9 @@ public class ListToMap {
     public static Map<String, Student> convert(List<Student> list) {
         return list.stream()
                 .collect(Collectors.toMap(
-                                Student::getSurname,
-                                e -> e,
-                                (ex, rep) -> ex
+                    Student::getSurname,
+                    Function.identity(),
+                    (ex, rep) -> ex
                         )
                 );
     }
